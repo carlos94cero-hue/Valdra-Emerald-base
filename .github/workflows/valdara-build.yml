@@ -22,11 +22,11 @@ jobs:
       - name: Preparar agbcc
         run: |
           git clone --depth 1 https://github.com/pret/agbcc.git /tmp/agbcc
-          make -C /tmp/agbcc -j2
-          make -C /tmp/agbcc install PREFIX="$GITHUB_WORKSPACE"
+          cd /tmp/agbcc && ./build.sh
+          ./install.sh "$GITHUB_WORKSPACE"
 
       - name: Compilar base Emerald
-        run: make -j2 modern
+        run: make -j2 MODERN=1
 
       - name: Comprobar ROM compilada
         run: |
