@@ -28,6 +28,9 @@ jobs:
           ./install.sh "$GITHUB_WORKSPACE"
         
 
+      - name: Inspeccionar formato original de sprites Emerald
+        run: python3 valdara/inspeccionar_hojas_originales.py
+
       - name: Integrar sprites iniciales Valdara
         run: python3 valdara/generate_valdara_sprites.py
 
