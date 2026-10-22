@@ -1,54 +1,38 @@
 #!/usr/bin/env python3
-"""Adaptar sprites prototipo de Valdara al formato de walking.png de pokeemerald."""
+"""Valdara: prueba de personajes clásicos en selección y mapa.
+Conserva el pixel art original y sus animaciones; aplica una paleta Valdara.
+"""
 from pathlib import Path
-from io import BytesIO
-import base64
 from PIL import Image
 
-DATA = {
-    "brendan": "iVBORw0KGgoAAAANSUhEUgAAADAAAACACAMAAAB6FhrAAAADAFBMVEUAAAAkIS5RQDyRalLVpYH00abY5e////8nPGBIfLHnuVRPdleLqXh9JDXHSVSNfbcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi7D2zAAAAAXRSTlMAQObYZgAAAQpJREFUeJztmOEOwiAMhCshkb3/C1vocNgxKCzDZuOiZl/pGX/dBQHGyKxqZSPkHoNFpQtlhsA4kXKPwVl8GSkP+EmwBLXwG7VNKuzNNFhHjJPzvKHG0yAyWBsH1v4uEG/nX8MLteA7LpR5HQBbOGZUHAD7AmDnB4Y6azQ4FH0kCwmHx5Khxjtlz0qGC6SxHzoNUr6FobUfXIwRJ+PZDzoMsx+0GJ7YD905dmna0/1AyGPuD17OSFnh/eFsP+T6QHu23sHA+4H3Ae8LSmsf/2m8F5gGwBYKDCEaKR4ZcwPwBSkrNGTTnRvS8D5dD9vW7nGcWhtiREEo/H/p8f0w7w//Mcz7gxaDrvvDB+UUQ5FmR7awAAAAAElFTkSuQmCC",
-    "may": "iVBORw0KGgoAAAANSUhEUgAAADAAAACACAMAAAB6FhrAAAADAFBMVEUAAAAkIS5RQDyRalLVpYH00abY5e////8nPGBIfLHnuVRPdleLqXh9JDXHSVSNfbcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADi7D2zAAAAAXRSTlMAQObYZgAAAQxJREFUeJztmNEOgyAMRTtDMnzg/393IFQrItSh2Cg3unigV5Y99KYDaKIhiMvHDSaIy2C+QUweBjUJzyzxXwat7EUKstzkK42TloI8g2X3m9kVHjuzXxhHXKBM9tOGEr/V8AnCgjyDUrig1LrA87K/YygxzGxXOAzgrP7GF6yY7AeDO9XfXBZo0Fb+gxQQnh5zhhJvlNzLGc7XI/JhfWaJH2I4mA8aG5Xmcc+Hiww9Hzgs0NDzgcHX5wN2f8PkNvODk44Kdlni/FCbD6k8kN+MBRoq8yHOgzgvbsiHOA82eQES2/1RQ7K7xwbavKvjgRwTPzaTvHyQ+f/S6/Ohzw8nGSrzoc8PdxlkzQ8/nVVHhc2OtMUAAAAASUVORK5CYII=",
-}
 ROOT = Path(__file__).resolve().parents[1]
-for character, payload in DATA.items():
-    src = Image.open(BytesIO(base64.b64decode(payload))).convert("RGBA")
-    assert src.size == (48,128), (character,src.size)
-    dest = ROOT / "graphics/object_events/pics/people" / character / "walking.png"
-    original = Image.open(dest)
-    width,height = original.size
-    assert width % 16 == 0 and height % 32 == 0, (character,original.size)
-    cols,rows=width//16,height//32
-    frames=cols*rows
-    # Reutilizar las posiciones de los fotogramas existentes. Las direcciones
-    # estándar de Emerald se agrupan por abajo, arriba y lateral.
-    # En hojas de 12 fotogramas se incluye el lateral derecho.
-    order=["front","back","left","right"]
-    result=Image.new("RGBA",(width,height),(0,0,0,0))
-    for index in range(frames):
-        direction=min(index//3,3)
-        pose=index%3
-        source=src.crop((pose*16,direction*32,(pose+1)*16,(direction+1)*32))
-        if direction==3 and frames<=9:
-            source=source.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
-        x=(index%cols)*16;y=(index//cols)*32
-        result.paste(source,(x,y))
-    # Cuantización global: índice 0 transparente y 15 colores de personaje.
-    rgb=Image.new("RGB",result.size,(0,0,0))
-    rgb.paste(result,mask=result.getchannel("A"))
-    indexed=rgb.quantize(colors=15,method=0)
-    pal=indexed.getpalette()[:45]
-    newpal=[0,0,0]+pal
-    newpal+= [0]*(768-len(newpal))
-    out=Image.new("P",result.size,0)
-    out.putpalette(newpal)
-    for y in range(height):
-        for x in range(width):
-            if result.getpixel((x,y))[3]>0:
-                out.putpixel((x,y),indexed.getpixel((x,y))+1)
-    out.info["transparency"]=0
-    out.save(dest,transparency=0)
-    # Los archivos JASC de las paletas deben acompañar los nuevos gráficos.
-    palette=ROOT/"graphics/object_events/palettes"/f"{character}.pal"
-    entries=[tuple(newpal[i:i+3]) for i in range(0,48,3)]
-    palette.write_text("JASC-PAL\n0100\n16\n"+"\n".join(f"{r} {g} {b}" for r,g,b in entries)+"\n")
-    print(f"{character}: {width}x{height}, {frames} frames, 16 colores")
+ASSETS = [
+    ("graphics/object_events/pics/people/brendan/walking.png", "male"),
+    ("graphics/object_events/pics/people/may/walking.png", "female"),
+    ("graphics/trainers/front_pics/brendan.png", "male"),
+    ("graphics/trainers/front_pics/may.png", "female"),
+]
+def transform(r,g,b,gender):
+    # Mantener luces, sombras y líneas originales, variando sutilmente ropa.
+    if b > r*1.15 and b > g*1.08:
+        return (max(0,int(r*.78)), min(255,int(g*1.05)), min(255,int(b*1.07)))
+    if gender=="female" and r > g*1.38 and r > b*1.2 and r>75:
+        return (min(255,int(r*.80)), min(255,int(g*.92)), min(255,int(b*1.25)))
+    if gender=="male" and g > r*1.2 and g > b*1.1 and g>65:
+        return (int(r*.8), int(g*.86), min(255,int(b*1.25)))
+    return (r,g,b)
+for relative,gender in ASSETS:
+    path=ROOT/relative
+    image=Image.open(path)
+    if image.mode!="P":
+        image=image.convert("P",palette=Image.Palette.ADAPTIVE,colors=16)
+    pal=image.getpalette() or []
+    colors=pal[:48]+[0]*max(0,48-len(pal))
+    new=[]
+    for i in range(16):
+        rgb=tuple(colors[3*i:3*i+3])
+        new.extend(transform(*rgb,gender))
+    image.putpalette(new+[0]*(768-len(new)))
+    image.save(path,transparency=image.info.get("transparency",0))
+    print("Valdara:",relative,image.size)
+print("Selección de personaje: sprites de entrenador modificados; mapa: walking modificado.")
