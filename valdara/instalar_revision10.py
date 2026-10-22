@@ -26,7 +26,7 @@ for name in ("brendan", "may"):
                 pal_lines = ["JASC-PAL", "0100", "16"]
                 pal_lines += [f"{rgb[i]} {rgb[i+1]} {rgb[i+2]}" for i in range(0, 48, 3)]
                 destpal = root / "graphics/trainers/palettes" / f"{name}.pal"
-                jobs.append(("\\n".join(pal_lines) + "\\n", destpal))
+                jobs.append(("\n".join(pal_lines) + "\n", destpal))
     pal = root / f"{name}.pal"
     if not pal.is_file():
         raise SystemExit(f"Falta paleta {name}.pal. No se instalarán gráficos.")
@@ -38,9 +38,9 @@ for name in ("brendan", "may"):
 for src, dest in jobs:
     dest.parent.mkdir(parents=True, exist_ok=True)
     if isinstance(src, str):
-        dest.write_text(src.replace("\\\\n", "\\n"))
+        dest.write_text(src)
         print(f"Paleta del retrato instalada: {dest.relative_to(root)}")
     else:
         shutil.copyfile(src, dest)
         print(f"Instalado: {src.name} -> {dest.relative_to(root)}")
-print("Valdara R13: selección y movimiento instalados. Pendiente comprobar aspecto dentro del juego.")
+print("Valdara R13: selección, movimiento y paletas de retrato instalados.")
