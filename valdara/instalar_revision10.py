@@ -5,8 +5,8 @@ from PIL import Image
 import shutil
 root=Path(__file__).resolve().parents[1]
 for name in ("brendan","may"):
-    source=root/"valdara"/"assets"/f"{name}_walking_144x32.png"
-    palette=root/"valdara"/"assets"/f"{name}.pal"
+    source=root/f"{name}_walking_144x32.png"
+    palette=root/f"{name}.pal"
     if not source.is_file() or not palette.is_file():
         raise SystemExit(f"Falta recurso de revisión 10: {source.name} / {palette.name}. No se ha modificado la ROM.")
     with Image.open(source) as im:
