@@ -28,7 +28,7 @@ jobs:
           ./install.sh "$GITHUB_WORKSPACE"
 
       - name: Integrar sprites iniciales Valdara
-        run: python3 valdara/convert_protagonists.py
+        run: python3 valdara/generate_valdara_sprites.py
 
       - name: Compilar base Emerald
         run: make -j2 MODERN=1
