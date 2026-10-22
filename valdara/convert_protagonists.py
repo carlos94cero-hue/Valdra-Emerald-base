@@ -35,7 +35,7 @@ for character, payload in DATA.items():
     # Cuantización global: índice 0 transparente y 15 colores de personaje.
     rgb=Image.new("RGB",result.size,(0,0,0))
     rgb.paste(result,mask=result.getchannel("A"))
-    indexed=rgb.quantize(colors=15,method=Image.Quantize.MEDIANCUT)
+    indexed=rgb.quantize(colors=15,method=0)
     pal=indexed.getpalette()[:45]
     newpal=[0,0,0]+pal
     newpal+= [0]*(768-len(newpal))
