@@ -30,7 +30,7 @@ for name in ("brendan", "may"):
         frame = source.crop((0, 0, 16, 32))
         portrait = Image.new("P", (64, 64), 0)
         portrait.putpalette(source.getpalette())
-        enlarged = frame.resize((32, 64), Image.Resampling.NEAREST)
+        enlarged = frame.resize((32, 64), Image.NEAREST)
         portrait.paste(enlarged, (16, 0))
         portrait.save(root / "graphics/trainers/front_pics" / f"{name}.png", transparency=0)
     print(f"Retrato provisional instalado: {name} (64x64)")
