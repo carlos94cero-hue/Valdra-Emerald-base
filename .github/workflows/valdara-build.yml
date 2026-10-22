@@ -31,8 +31,8 @@ jobs:
       - name: Inspeccionar formato original de sprites Emerald
         run: python3 valdara/inspeccionar_hojas_originales.py
 
-      - name: Integrar sprites iniciales Valdara
-        run: python3 valdara/generate_valdara_sprites.py
+      - name: Instalar sprites Valdara revision 10
+        run: python3 valdara/instalar_revision10.py
 
       - name: Validar sprites y paletas Valdara
         run: python3 valdara/validate_sprites.py
@@ -48,7 +48,7 @@ jobs:
       - name: Guardar ROM de prueba
         uses: actions/upload-artifact@v4
         with:
-          name: valdara-protagonistas-prueba
+          name: valdara-r10-prueba
           path: '*.gba'
           if-no-files-found: error
           retention-days: 3
