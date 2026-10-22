@@ -1,0 +1,42 @@
+name: Valdara - compilacion de prueba
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 35
+    steps:
+      - name: Descargar codigo de Emerald
+        uses: actions/checkout@v4
+
+      - name: Instalar dependencias
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential git make python3 gcc-arm-none-eabi binutils-arm-none-eabi libpng-dev
+
+      - name: Preparar agbcc
+        run: |
+          git clone --depth 1 https://github.com/pret/agbcc.git /tmp/agbcc
+          make -C /tmp/agbcc -j2
+          make -C /tmp/agbcc install PREFIX="$GITHUB_WORKSPACE"
+
+      - name: Compilar base Emerald
+        run: make -j2 modern
+
+      - name: Comprobar ROM compilada
+        run: |
+          find . -maxdepth 2 -name '*.gba' -type f -print
+          test -n "$(find . -maxdepth 2 -name '*.gba' -type f -print -quit)"
+
+      - name: Guardar ROM de prueba
+        uses: actions/upload-artifact@v4
+        with:
+          name: emerald-base-prueba
+          path: '*.gba'
+          if-no-files-found: error
+          retention-days: 3
