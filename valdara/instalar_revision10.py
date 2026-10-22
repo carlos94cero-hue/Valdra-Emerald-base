@@ -22,14 +22,16 @@ for name in ("brendan","may"):
     shutil.copyfile(source,dest)
     shutil.copyfile(palette,destpal)
     print(f"Instalado {name}: 9 frames de 16x32 y paleta de 16 colores")
-# Retratos de selección: solo se reemplazan cuando ambos recursos están presentes.
-portraits = [root / f"{name}_seleccion_64x64.png" for name in ("brendan", "may")]
-if all(p.is_file() for p in portraits):
-    for name, source in zip(("brendan", "may"), portraits):
-        with Image.open(source) as im:
-            if im.size != (64, 64) or im.mode != "P" or max(im.getdata()) > 15:
-                raise SystemExit(f"Retrato inválido: {source.name}")
-        shutil.copyfile(source, root / "graphics/trainers/front_pics" / f"{name}.png")
-        print(f"Retrato instalado: {name}")
-else:
-    print("ATENCIÓN: selección de personaje conserva retratos originales; faltan ambos PNG de 64x64.")
+# Retratos provisionales coherentes con los sprites de movimiento.
+# Se obtienen del primer frame frontal, sin introducir arte externo sin validar.
+for name in ("brendan", "may"):
+    walking = root / "graphics/object_events/pics/people" / name / "walking.png"
+    with Image.open(walking) as source:
+        frame = source.crop((0, 0, 16, 32))
+        portrait = Image.new("P", (64, 64), 0)
+        portrait.putpalette(source.getpalette())
+        enlarged = frame.resize((32, 64), Image.Resampling.NEAREST)
+        portrait.paste(enlarged, (16, 0))
+        portrait.save(root / "graphics/trainers/front_pics" / f"{name}.png", transparency=0)
+    print(f"Retrato provisional instalado: {name} (64x64)")
+print("AVISO: retratos provisionales; no son ilustraciones finales aprobadas.")
