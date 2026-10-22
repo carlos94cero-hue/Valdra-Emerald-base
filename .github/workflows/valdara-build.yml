@@ -31,6 +31,9 @@ jobs:
       - name: Integrar sprites iniciales Valdara
         run: python3 valdara/generate_valdara_sprites.py
 
+      - name: Validar sprites y paletas Valdara
+        run: python3 valdara/validate_sprites.py
+
       - name: Compilar base Emerald
         run: make -j2 MODERN=1
 
