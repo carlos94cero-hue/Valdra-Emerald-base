@@ -12,37 +12,66 @@ def canvas(size):
 def put(im,coords,fill):
  ImageDraw.Draw(im).rectangle(coords,fill=fill)
 def character(im,ox,oy,gender,view,step=0,scale=1):
- # Pixel art dibujado por capas; silueta centrada, sin fondo.
- def rect(x1,y1,x2,y2,c):
-  put(im,(ox+x1*scale,oy+y1*scale,ox+(x2+1)*scale-1,oy+(y2+1)*scale-1),c)
+ """Dibujo por píxeles con contornos, sombras y silueta de entrenador GBA."""
  female=gender=="female"
- # Cabello y gorro; espalda, frontal y perfil.
- rect(4,3,11,10,2)
- rect(5,4,10,10,4 if view!="back" else 2)
- rect(3,3,12,5,14 if female else 8)
- rect(4,2,11,3,15 if female else 9)
- rect(5,1,10,2,2)
+ def px(x,y,color):
+  put(im,(ox+x*scale,oy+y*scale,ox+(x+1)*scale-1,oy+(y+1)*scale-1),color)
+ def rect(x1,y1,x2,y2,color):
+  for y in range(y1,y2+1):
+   for x in range(x1,x2+1):px(x,y,color)
+ # Silueta compacta de 16x32: gorra curvada, cabello, cuello y mochila.
+ for y,x1,x2 in [(2,6,9),(3,4,11),(4,3,12),(5,3,12),(6,4,11),
+                 (7,4,11),(8,4,11),(9,5,10),(10,5,10),(11,6,9)]:
+  rect(x1,y,x2,y,1)
+ rect(4,5,11,9,2)
+ if view!="back":rect(5,6,10,10,5)
+ else:rect(4,6,11,10,2)
  if female:
-  rect(3,7,4,13,2);rect(11,7,12,13,2)
+  rect(3,7,4,12,2);rect(11,7,12,12,2)
+  px(3,11,3);px(12,12,3)
+ else:
+  px(4,8,3);px(11,8,3)
+ # Gorra con visera, insignia y dos niveles de sombra
+ cap=14 if female else 8
+ light=15 if female else 10
+ rect(4,3,11,4,cap)
+ rect(5,2,10,2,light)
+ rect(3,5,12,5,cap)
+ rect(4,5,6,5,light)
+ px(8,3,11);px(9,3,7)
  if view=="front":
-  rect(6,8,6,8,1);rect(9,8,9,8,1)
- elif view=="left":rect(5,8,5,8,1)
- elif view=="right":rect(10,8,10,8,1)
- # cuello, mochila y chaqueta de viajero
- rect(6,11,9,12,5)
- if view=="back":rect(3,12,12,21,2);rect(4,13,11,19,11)
- rect(4,13,11,22,9 if not female else 14)
- rect(6,13,9,21,7)
- rect(7,15,8,18,11)
- rect(2,14,3,21+(step==1),9 if not female else 14)
- rect(12,14,13,21+(step==2),9 if not female else 14)
- rect(2,22,3,23,5);rect(12,22,13,23,5)
- if female:rect(4,22,11,25,8)
- else:rect(4,22,11,24,8)
- rect(4,25,7,29+(step==1),1)
- rect(9,25,11,29+(step==2),1)
- rect(3,29+(step==1),7,30+(step==1),2)
- rect(9,29+(step==2),12,30+(step==2),2)
+  px(6,8,1);px(9,8,1);px(7,10,4)
+ elif view=="left":px(5,8,1)
+ elif view=="right":px(10,8,1)
+ # Cuello, chaqueta, mochila y correa diagonal
+ rect(6,11,9,12,4)
+ rect(4,13,11,21,1)
+ rect(5,13,10,20,14 if female else 8)
+ rect(6,13,9,19,7)
+ for y in range(14,20):px(5+(y-14)//3,y,11)
+ rect(7,16,8,18,11)
+ if view=="back":
+  rect(5,14,10,20,2)
+  rect(6,15,9,19,3)
+  px(7,16,11);px(8,16,11)
+ # Brazos con puños, pose asimétrica en la marcha
+ left=1 if step==1 else 0
+ right=1 if step==2 else 0
+ rect(2,14+left,3,19+left,1)
+ rect(12,14+right,13,19+right,1)
+ rect(3,15+left,3,18+left,14 if female else 9)
+ rect(12,15+right,12,18+right,14 if female else 9)
+ rect(2,20+left,3,21+left,5)
+ rect(12,20+right,13,21+right,5)
+ # Cinturón, pantalón, piernas alternadas y botas
+ rect(5,21,10,22,2)
+ rect(5,23,7,26+left,8)
+ rect(9,23,11,26+right,8)
+ rect(5,27+left,7,29+left,3)
+ rect(9,27+right,11,29+right,3)
+ rect(4,29+left,7,30+left,1)
+ rect(9,29+right,12,30+right,1)
+ px(5,29+left,9);px(10,29+right,9)
 def save(im,path):
  path.parent.mkdir(parents=True,exist_ok=True)
  im.save(path,transparency=0)
