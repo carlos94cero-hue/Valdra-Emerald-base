@@ -1,3 +1,4 @@
+
 name: Valdara - compilacion de prueba
 
 on:
@@ -10,6 +11,7 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     timeout-minutes: 35
+
     steps:
       - name: Descargar codigo de Emerald
         uses: actions/checkout@v4
@@ -17,13 +19,16 @@ jobs:
       - name: Instalar dependencias
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential git make python3 gcc-arm-none-eabi binutils-arm-none-eabi libpng-dev
+          sudo apt-get install -y build-essential git make python3 python3-pil gcc-arm-none-eabi binutils-arm-none-eabi libpng-dev
 
       - name: Preparar agbcc
         run: |
           git clone --depth 1 https://github.com/pret/agbcc.git /tmp/agbcc
           cd /tmp/agbcc && ./build.sh
           ./install.sh "$GITHUB_WORKSPACE"
+
+      - name: Integrar sprites iniciales Valdara
+        run: python3 valdara/convert_protagonists.py
 
       - name: Compilar base Emerald
         run: make -j2 MODERN=1
@@ -36,7 +41,7 @@ jobs:
       - name: Guardar ROM de prueba
         uses: actions/upload-artifact@v4
         with:
-          name: emerald-base-prueba
+          name: valdara-protagonistas-prueba
           path: '*.gba'
           if-no-files-found: error
           retention-days: 3
