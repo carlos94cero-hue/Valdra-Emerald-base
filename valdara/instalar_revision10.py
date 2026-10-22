@@ -22,4 +22,14 @@ for name in ("brendan","may"):
     shutil.copyfile(source,dest)
     shutil.copyfile(palette,destpal)
     print(f"Instalado {name}: 9 frames de 16x32 y paleta de 16 colores")
-print("NOTA: retratos de selección no incluidos en esta prueba.")
+# Retratos de selección: solo se reemplazan cuando ambos recursos están presentes.
+portraits = [root / f"{name}_seleccion_64x64.png" for name in ("brendan", "may")]
+if all(p.is_file() for p in portraits):
+    for name, source in zip(("brendan", "may"), portraits):
+        with Image.open(source) as im:
+            if im.size != (64, 64) or im.mode != "P" or max(im.getdata()) > 15:
+                raise SystemExit(f"Retrato inválido: {source.name}")
+        shutil.copyfile(source, root / "graphics/trainers/front_pics" / f"{name}.png")
+        print(f"Retrato instalado: {name}")
+else:
+    print("ATENCIÓN: selección de personaje conserva retratos originales; faltan ambos PNG de 64x64.")
