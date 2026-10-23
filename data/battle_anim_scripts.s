@@ -371,6 +371,9 @@ gBattleAnims_Moves::
 	.4byte Move_WATER_PULSE
 	.4byte Move_DOOM_DESIRE
 	.4byte Move_PSYCHO_BOOST
+	.4byte Move_CRUNCH @ MOVE_VALDARA_ECLIPSE_ABSOLUTO; provisional animation
+	.4byte Move_SHADOW_BALL @ MOVE_VALDARA_NOCHE_ETERNA; provisional animation
+	.4byte Move_EARTHQUAKE @ MOVE_VALDARA_FURIA_CONTINENTAL; provisional animation
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2

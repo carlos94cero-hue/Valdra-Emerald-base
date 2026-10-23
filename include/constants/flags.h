@@ -1657,4 +1657,7 @@
 #define FLAG_TEMP_REGICE_PUZZLE_FAILED          FLAG_TEMP_3
 #define FLAG_TEMP_HIDE_MIRAGE_ISLAND_BERRY_TREE FLAG_TEMP_11
 
+// Valdara: persistent story milestones, in previously unused flags.
+#define FLAG_VALDARA_PRIMERA_PRUEBA 0x020
+#define FLAG_VALDARA_SEGUNDA_PRUEBA 0x021
 #endif // GUARD_CONSTANTS_FLAGS_H

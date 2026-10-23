@@ -2590,6 +2590,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                 gBattlerAttacker = battler;
                 switch (gLastUsedAbility)
                 {
+                case ABILITY_VALDARA_GRACIA_GUARDIANA:
+                    if (gBattleMons[battler].maxHP > gBattleMons[battler].hp)
+                    {
+                        BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        gBattleMoveDamage = gBattleMons[battler].maxHP / 16;
+                        if (gBattleMoveDamage == 0) gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        effect++;
+                    }
+                    break;
                 case ABILITY_RAIN_DISH:
                     if (WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN)
                      && gBattleMons[battler].maxHP > gBattleMons[battler].hp)

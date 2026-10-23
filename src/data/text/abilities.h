@@ -77,6 +77,32 @@ static const u8 sShellArmorDescription[] = _("Blocks critical hits.");
 static const u8 sCacophonyDescription[] = _("Avoids sound-based moves.");
 static const u8 sAirLockDescription[] = _("Negates weather effects.");
 
+// Valdara abilities: active status tracked in valdara/bloque1/abilities.json.
+static const u8 sValdaraAbilityDesc_ESPIRITU_PROTECTOR[] = _("Daño recibido x0,85\npor debajo de la mitad de PS.");
+static const u8 sValdaraAbilityDesc_AFINIDAD_OSCURA[] = _("Potencia Siniestro\nx1,20.");
+static const u8 sValdaraAbilityDesc_INSTINTO_EXPLORADOR[] = _("Potencia ataques\nde Tierra x1,20.");
+static const u8 sValdaraAbilityDesc_VINCULO_GUARDIAN[] = _("Daño supereficaz\nrecibido x0,80.");
+static const u8 sValdaraAbilityDesc_PODER_UMBRIO[] = _("Potencia Siniestro y\nFantasma x1,25.");
+static const u8 sValdaraAbilityDesc_ADAPTACION_NATURAL[] = _("Daño supereficaz\nrecibido x0,80.");
+static const u8 sValdaraAbilityDesc_AURA_PROTECTORA[] = _("Protege al aliado en\ncombates dobles x0,80.");
+static const u8 sValdaraAbilityDesc_GRACIA_GUARDIANA[] = _("Recupera 1/16 de PS\nal final de cada turno.");
+static const u8 sValdaraAbilityDesc_DOMINIO_OSCURO[] = _("Potencia Siniestro\nx1,30.");
+static const u8 sValdaraAbilityDesc_VOLUNTAD_UMBRIA[] = _("+1 At. Esp. tras\nderrotar a un rival.");
+static const u8 sValdaraAbilityDesc_ADAPTACION_TERRENAL[] = _("Daño supereficaz\nrecibido x0,75.");
+static const u8 sValdaraAbilityDesc_CORAZA_ANCESTRAL[] = _("Daño físico\nrecibido x0,80.");
+static const u8 sValdaraAbilityDesc_JURAMENTO_PROTECTOR[] = _("+1 Defensa y Def. Esp.\nal entrar en combate.");
+static const u8 sValdaraAbilityDesc_BENDICION_VITAL[] = _("Curación por movimientos\npropios x1,30.");
+static const u8 sValdaraAbilityDesc_SOBERANIA_OSCURA[] = _("Siniestro x1,20; ignora\nDefensas positivas.");
+static const u8 sValdaraAbilityDesc_REINA_DEL_ECLIPSE[] = _("+1 At. Esp. y Vel.\nal derrotar a un rival.");
+static const u8 sValdaraAbilityDesc_FUERZA_PRIMORDIAL[] = _("Tierra y Roca\nx1,25.");
+static const u8 sValdaraAbilityDesc_FORTALEZA_VIVIENTE[] = _("Daño físico eficaz\nx0,70.");
+static const u8 sValdaraAbilityDesc_SOBERANO_ONIRICO[] = _("Habilidad del Trío\nMístico. En diseño.");
+static const u8 sValdaraAbilityDesc_PESADILLA_ETERNA[] = _("Habilidad oculta.\nEn diseño.");
+static const u8 sValdaraAbilityDesc_SENOR_DE_LOS_PORTALES[] = _("Habilidad del Trío\nMístico. En diseño.");
+static const u8 sValdaraAbilityDesc_DISTORSION_ESPACIAL[] = _("Habilidad oculta.\nEn diseño.");
+static const u8 sValdaraAbilityDesc_DOMINIO_DISTORSIONADO[] = _("Habilidad del Trío\nMístico. En diseño.");
+static const u8 sValdaraAbilityDesc_RUPTURA_DIMENSIONAL[] = _("Habilidad oculta.\nEn diseño.");
+
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
 {
     [ABILITY_NONE] = _("-------"),
@@ -157,6 +183,31 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_SHELL_ARMOR] = _("SHELL ARMOR"),
     [ABILITY_CACOPHONY] = _("CACOPHONY"),
     [ABILITY_AIR_LOCK] = _("AIR LOCK"),
+    [ABILITY_VALDARA_ESPIRITU_PROTECTOR] = _("ESP. PROTECT"),
+    [ABILITY_VALDARA_AFINIDAD_OSCURA] = _("AFIN. OSCURA"),
+    [ABILITY_VALDARA_INSTINTO_EXPLORADOR] = _("INST. EXPL."),
+    [ABILITY_VALDARA_VINCULO_GUARDIAN] = _("VINC. GUARD"),
+    [ABILITY_VALDARA_PODER_UMBRIO] = _("PODER UMBRIO"),
+    [ABILITY_VALDARA_ADAPTACION_NATURAL] = _("ADAPT. NAT."),
+    [ABILITY_VALDARA_AURA_PROTECTORA] = _("AURA PROTECT"),
+    [ABILITY_VALDARA_GRACIA_GUARDIANA] = _("GRACIA GUARD"),
+    [ABILITY_VALDARA_DOMINIO_OSCURO] = _("DOMINIO OSC"),
+    [ABILITY_VALDARA_VOLUNTAD_UMBRIA] = _("VOLUNT. UMB"),
+    [ABILITY_VALDARA_ADAPTACION_TERRENAL] = _("ADAPT. TERR"),
+    [ABILITY_VALDARA_CORAZA_ANCESTRAL] = _("CORAZA ANC."),
+    [ABILITY_VALDARA_JURAMENTO_PROTECTOR] = _("JURAM. PROT."),
+    [ABILITY_VALDARA_BENDICION_VITAL] = _("BENDIC. VIT"),
+    [ABILITY_VALDARA_SOBERANIA_OSCURA] = _("SOBERANIA OS"),
+    [ABILITY_VALDARA_REINA_DEL_ECLIPSE] = _("REINA ECLIP."),
+    [ABILITY_VALDARA_FUERZA_PRIMORDIAL] = _("F. PRIMORD."),
+    [ABILITY_VALDARA_FORTALEZA_VIVIENTE] = _("FORT. VIVA"),
+    [ABILITY_VALDARA_SOBERANO_ONIRICO] = _("SOBER. ONIR"),
+    [ABILITY_VALDARA_PESADILLA_ETERNA] = _("PESAD. ETER"),
+    [ABILITY_VALDARA_SENOR_DE_LOS_PORTALES] = _("SENOR PORT"),
+    [ABILITY_VALDARA_DISTORSION_ESPACIAL] = _("DIST. ESPAC"),
+    [ABILITY_VALDARA_DOMINIO_DISTORSIONADO] = _("DOM. DISTOR"),
+    [ABILITY_VALDARA_RUPTURA_DIMENSIONAL] = _("RUPT. DIM"),
+
 };
 
 const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
@@ -239,4 +290,29 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_SHELL_ARMOR] = sShellArmorDescription,
     [ABILITY_CACOPHONY] = sCacophonyDescription,
     [ABILITY_AIR_LOCK] = sAirLockDescription,
+    [ABILITY_VALDARA_ESPIRITU_PROTECTOR] = sValdaraAbilityDesc_ESPIRITU_PROTECTOR,
+    [ABILITY_VALDARA_AFINIDAD_OSCURA] = sValdaraAbilityDesc_AFINIDAD_OSCURA,
+    [ABILITY_VALDARA_INSTINTO_EXPLORADOR] = sValdaraAbilityDesc_INSTINTO_EXPLORADOR,
+    [ABILITY_VALDARA_VINCULO_GUARDIAN] = sValdaraAbilityDesc_VINCULO_GUARDIAN,
+    [ABILITY_VALDARA_PODER_UMBRIO] = sValdaraAbilityDesc_PODER_UMBRIO,
+    [ABILITY_VALDARA_ADAPTACION_NATURAL] = sValdaraAbilityDesc_ADAPTACION_NATURAL,
+    [ABILITY_VALDARA_AURA_PROTECTORA] = sValdaraAbilityDesc_AURA_PROTECTORA,
+    [ABILITY_VALDARA_GRACIA_GUARDIANA] = sValdaraAbilityDesc_GRACIA_GUARDIANA,
+    [ABILITY_VALDARA_DOMINIO_OSCURO] = sValdaraAbilityDesc_DOMINIO_OSCURO,
+    [ABILITY_VALDARA_VOLUNTAD_UMBRIA] = sValdaraAbilityDesc_VOLUNTAD_UMBRIA,
+    [ABILITY_VALDARA_ADAPTACION_TERRENAL] = sValdaraAbilityDesc_ADAPTACION_TERRENAL,
+    [ABILITY_VALDARA_CORAZA_ANCESTRAL] = sValdaraAbilityDesc_CORAZA_ANCESTRAL,
+    [ABILITY_VALDARA_JURAMENTO_PROTECTOR] = sValdaraAbilityDesc_JURAMENTO_PROTECTOR,
+    [ABILITY_VALDARA_BENDICION_VITAL] = sValdaraAbilityDesc_BENDICION_VITAL,
+    [ABILITY_VALDARA_SOBERANIA_OSCURA] = sValdaraAbilityDesc_SOBERANIA_OSCURA,
+    [ABILITY_VALDARA_REINA_DEL_ECLIPSE] = sValdaraAbilityDesc_REINA_DEL_ECLIPSE,
+    [ABILITY_VALDARA_FUERZA_PRIMORDIAL] = sValdaraAbilityDesc_FUERZA_PRIMORDIAL,
+    [ABILITY_VALDARA_FORTALEZA_VIVIENTE] = sValdaraAbilityDesc_FORTALEZA_VIVIENTE,
+    [ABILITY_VALDARA_SOBERANO_ONIRICO] = sValdaraAbilityDesc_SOBERANO_ONIRICO,
+    [ABILITY_VALDARA_PESADILLA_ETERNA] = sValdaraAbilityDesc_PESADILLA_ETERNA,
+    [ABILITY_VALDARA_SENOR_DE_LOS_PORTALES] = sValdaraAbilityDesc_SENOR_DE_LOS_PORTALES,
+    [ABILITY_VALDARA_DISTORSION_ESPACIAL] = sValdaraAbilityDesc_DISTORSION_ESPACIAL,
+    [ABILITY_VALDARA_DOMINIO_DISTORSIONADO] = sValdaraAbilityDesc_DOMINIO_DISTORSIONADO,
+    [ABILITY_VALDARA_RUPTURA_DIMENSIONAL] = sValdaraAbilityDesc_RUPTURA_DIMENSIONAL,
+
 };

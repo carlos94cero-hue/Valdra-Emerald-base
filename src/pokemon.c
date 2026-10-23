@@ -4,6 +4,7 @@
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_controllers.h"
+#include "battle_main.h"
 #include "battle_message.h"
 #include "battle_pike.h"
 #include "battle_pyramid.h"
@@ -47,6 +48,10 @@
 #include "constants/songs.h"
 #include "constants/trainers.h"
 #include "constants/union_room.h"
+#include "constants/vars.h"
+#include "constants/flags.h"
+#include "../valdara/bloque1/breeding_rules.h"
+#include "../valdara/bloque1/ability_rules.h"
 
 #define DAY_EVO_HOUR_BEGIN       12
 #define DAY_EVO_HOUR_END         HOURS_PER_DAY
@@ -2813,7 +2818,7 @@ static u16 CalculateBoxMonChecksum(struct BoxPokemon *boxMon)
 
 #define CALC_STAT(base, iv, ev, statIndex, field)               \
 {                                                               \
-    u8 baseStat = gSpeciesInfo[species].base;                   \
+    u8 baseStat = ValdaraStatForRoute(species, VarGet(VAR_VALDARA_CAMINO), statIndex == STAT_ATK ? VALDARA_STAT_ATK : statIndex == STAT_DEF ? VALDARA_STAT_DEF : statIndex == STAT_SPEED ? VALDARA_STAT_SPEED : statIndex == STAT_SPATK ? VALDARA_STAT_SPATK : VALDARA_STAT_SPDEF, gSpeciesInfo[species].base);                   \
     s32 n = (((2 * baseStat + iv + ev / 4) * level) / 100) + 5; \
     u8 nature = GetNature(mon);                                 \
     n = ModifyStatByNature(nature, n, statIndex);               \
@@ -2848,7 +2853,7 @@ void CalculateMonStats(struct Pokemon *mon)
     }
     else
     {
-        s32 n = 2 * gSpeciesInfo[species].baseHP + hpIV;
+        s32 n = 2 * ValdaraStatForRoute(species, VarGet(VAR_VALDARA_CAMINO), VALDARA_STAT_HP, gSpeciesInfo[species].baseHP) + hpIV;
         newMaxHP = (((n + hpEV / 4) * level) / 100) + level + 10;
     }
 
@@ -3103,6 +3108,23 @@ void DeleteFirstMoveAndGiveMoveToBoxMon(struct BoxPokemon *boxMon, u16 move)
     (var) /= (gStatStageRatios)[(mon)->statStages[(statIndex)]][1];                 \
 }
 
+static bool8 ValdaraIsSuperEffective(u8 moveType, u8 defType1, u8 defType2)
+{
+    u32 i;
+    s32 multiplier = 10;
+    if (moveType == TYPE_MYSTERY || moveType == TYPE_NONE) return FALSE;
+    for (i = 0; i < ARRAY_COUNT(gTypeEffectiveness); i += 3)
+    {
+        if (gTypeEffectiveness[i] == TYPE_ENDTABLE) break;
+        if (gTypeEffectiveness[i] != moveType) continue;
+        if (gTypeEffectiveness[i+1] == defType1)
+            multiplier = multiplier * gTypeEffectiveness[i+2] / 10;
+        if (defType1 != defType2 && gTypeEffectiveness[i+1] == defType2)
+            multiplier = multiplier * gTypeEffectiveness[i+2] / 10;
+    }
+    return multiplier > 10;
+}
+
 s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *defender, u32 move, u16 sideStatus, u16 powerOverride, u8 typeOverride, u8 battlerIdAtk, u8 battlerIdDef)
 {
     u32 i;
@@ -3173,7 +3195,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (attackerHoldEffect == sHoldEffectToType[i][0]
             && type == sHoldEffectToType[i][1])
         {
-            if (IS_TYPE_PHYSICAL(type))
+            if (IS_TYPE_PHYSICAL(type) || move == MOVE_VALDARA_ECLIPSE_ABSOLUTO)
                 attack = (attack * (attackerHoldEffectParam + 100)) / 100;
             else
                 spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
@@ -3229,7 +3251,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
         defense /= 2;
 
-    if (IS_TYPE_PHYSICAL(type))
+    if (IS_TYPE_PHYSICAL(type) || move == MOVE_VALDARA_ECLIPSE_ABSOLUTO)
     {
         if (gCritMultiplier == 2)
         {
@@ -3284,7 +3306,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (type == TYPE_MYSTERY)
         damage = 0; // is ??? type. does 0 damage.
 
-    if (IS_TYPE_SPECIAL(type))
+    if (IS_TYPE_SPECIAL(type) && move != MOVE_VALDARA_ECLIPSE_ABSOLUTO)
     {
         if (gCritMultiplier == 2)
         {
@@ -3368,7 +3390,34 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
             damage = (15 * damage) / 10;
     }
 
-    return damage + 2;
+    // Apply the original Emerald +2 before trait percentage modifiers.
+    damage += 2;
+
+    // Valdara upbringing bonuses: only effects whose exact factors were approved.
+    if (damage > 0 && gBattleMovePower > 0)
+    {
+        u8 physical = IS_TYPE_PHYSICAL(type) || move == MOVE_VALDARA_ECLIPSE_ABSOLUTO;
+        bool8 superEffective = ValdaraIsSuperEffective(type, defender->type1, defender->type2);
+        damage = (damage * ValdaraAttackPercent(attacker->ability, type)) / 100;
+        damage = (damage * ValdaraDefensePercent(defender->ability, defender->hp,
+            defender->maxHP, physical, superEffective)) / 100;
+        if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE)
+        {
+            for (i = 0; i < gBattlersCount; i++)
+            {
+                if (i != battlerIdDef && GetBattlerSide(i) == GetBattlerSide(battlerIdDef)
+                    && gBattleMons[i].hp > 0
+                    && gBattleMons[i].ability == ABILITY_VALDARA_AURA_PROTECTORA)
+                {
+                    damage = damage * 80 / 100;
+                    break;
+                }
+            }
+        }
+        if (damage < 1) damage = 1;
+    }
+
+    return damage;
 }
 
 u8 CountAliveMonsInBattle(u8 caseId)
@@ -4545,7 +4594,14 @@ u8 GetMonsStateToDoubles_2(void)
 
 u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
 {
-    if (abilityNum)
+    // Mid-stage upbringing abilities track the save's chosen path.
+    // Gen 3 does not support hidden traits natively: hidden ability stays data-only.
+    if (ValdaraIsBreedingSpecies(species) && species >= 3 && species <= 6)
+    {
+        gLastUsedAbility = ValdaraRouteAbility(species, VarGet(VAR_VALDARA_CAMINO), ABILITY_TORRENT);
+        return gLastUsedAbility;
+    }
+    if (abilityNum && (!ValdaraIsBreedingSpecies(species) || gSpeciesInfo[species].abilities[1] != ABILITY_NONE))
         gLastUsedAbility = gSpeciesInfo[species].abilities[1];
     else
         gLastUsedAbility = gSpeciesInfo[species].abilities[0];
@@ -5521,6 +5577,17 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
     // Prevent evolution with Everstone, unless we're just viewing the party menu with an evolution item
     if (holdEffect == HOLD_EFFECT_PREVENT_EVOLVE && mode != EVO_MODE_ITEM_CHECK)
         return SPECIES_NONE;
+
+    // Valdara: enforce the chosen path + completed breeding trials.
+    // Use the original evolution scene at level-up; never mix male/female branches.
+    if (ValdaraIsBreedingSpecies(species))
+    {
+        if (mode != EVO_MODE_NORMAL) return SPECIES_NONE;
+        return ValdaraBreedingTarget(species, GetMonData(mon, MON_DATA_LEVEL, 0),
+                                    VarGet(VAR_VALDARA_CAMINO),
+                                    FlagGet(FLAG_VALDARA_PRIMERA_PRUEBA),
+                                    FlagGet(FLAG_VALDARA_SEGUNDA_PRUEBA));
+    }
 
     switch (mode)
     {

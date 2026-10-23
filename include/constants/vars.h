@@ -324,4 +324,7 @@
 
 #define VAR_TEMP_TRANSFERRED_SPECIES  VAR_TEMP_1
 
+// Valdara: persistent route choice. 0 undecided; 1 Hero; 2 Villain; 3 Researcher.
+// Reserved from previously unused slot 0x40F7; keep stable for saves.
+#define VAR_VALDARA_CAMINO 0x40F7
 #endif // GUARD_CONSTANTS_VARS_H

@@ -1417,6 +1417,10 @@ static const u8 sPsychoBoostDescription[] = _(
     "Allows a full-power attack,\n"
     "but sharply lowers SP. ATK.");
 
+static const u8 sValdaraEclipseAbsolutoDescription[] = _("Golpe oscuro brutal.\nPuede bajar DEF.");
+static const u8 sValdaraNocheEternaDescription[] = _("Oscuridad total.\nPuede bajar DEF. ESP.");
+static const u8 sValdaraFuriaContinentalDescription[] = _("Sacude la tierra.\nPuede subir ATAQUE.");
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -1774,4 +1778,7 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_WATER_PULSE - 1] = sWaterPulseDescription,
     [MOVE_DOOM_DESIRE - 1] = sDoomDesireDescription,
     [MOVE_PSYCHO_BOOST - 1] = sPsychoBoostDescription,
+    [MOVE_VALDARA_ECLIPSE_ABSOLUTO - 1] = sValdaraEclipseAbsolutoDescription,
+    [MOVE_VALDARA_NOCHE_ETERNA - 1] = sValdaraNocheEternaDescription,
+    [MOVE_VALDARA_FURIA_CONTINENTAL - 1] = sValdaraFuriaContinentalDescription,
 };
