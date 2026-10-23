@@ -1,0 +1,26 @@
+name: Valdara sprite assets
+on:
+  push:
+    branches: [valdara-inicio-logo-aprobado]
+    paths:
+      - 'valdara/emerald_arte_20261023/**'
+      - 'valdara/sprites/**'
+      - 'graphics/object_events/pics/people/brendan/**'
+      - 'graphics/object_events/pics/people/may/**'
+      - 'graphics/object_events/palettes/brendan*'
+      - 'graphics/object_events/palettes/may*'
+      - 'graphics/trainers/front_pics/brendan.png'
+      - 'graphics/trainers/front_pics/may.png'
+      - 'graphics/trainers/palettes/brendan.pal'
+      - 'graphics/trainers/palettes/may.pal'
+permissions:
+  contents: read
+jobs:
+  assets:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate real GBA protagonist assets only
+        run: python3 valdara/sprites/test_assets.py
+      - name: Confirm this job did not create a ROM
+        run: test -z "$(find . -maxdepth 2 -name '*.gba' -print -quit)"
