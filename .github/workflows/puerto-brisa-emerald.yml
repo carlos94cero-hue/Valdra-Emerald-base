@@ -1,0 +1,29 @@
+name: Puerto Brisa - Esmeralda
+on:
+  push:
+    branches: [valdara-puerto-brisa-esmeralda]
+  workflow_dispatch:
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: bash
+jobs:
+  resources:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Export source for map and animation validation
+        run: |
+          mkdir -p dist
+          git archive --format=zip HEAD -o dist/Emerald-source.zip
+          git rev-parse HEAD > dist/commit.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Emerald-port-workspace
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14
