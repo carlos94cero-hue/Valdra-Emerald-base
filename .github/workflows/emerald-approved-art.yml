@@ -17,9 +17,10 @@ jobs:
       - name: Instalar compilador y herramientas de prueba
         run: |
           set -eu
+          mkdir -p dist
           sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu/|http://archive.ubuntu.com/ubuntu/|g; s|https://azure.archive.ubuntu.com/ubuntu/|https://archive.ubuntu.com/ubuntu/|g' /etc/apt/sources.list.d/ubuntu.sources
-          sudo apt-get update -o Acquire::Retries=2 -o Acquire::http::Timeout=30
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential git binutils-arm-none-eabi libpng-dev python3-pil libmgba-dev
+          sudo apt-get update -o Acquire::Retries=2 -o Acquire::http::Timeout=30 > dist/apt.log 2>&1
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential git binutils-arm-none-eabi libpng-dev python3-pil libmgba-dev >> dist/apt.log 2>&1 || { tail -60 dist/apt.log; exit 1; }
       - name: Instalar y validar los dibujos nuevos
         run: |
           python3 valdara/install_emerald_art.py
@@ -29,9 +30,11 @@ jobs:
           git clone --depth 1 https://github.com/pret/agbcc.git /tmp/agbcc
           cd /tmp/agbcc
           ./build.sh > "$GITHUB_WORKSPACE/dist/agbcc.log" 2>&1
-          ./install.sh "$GITHUB_WORKSPACE"
+          ./install.sh "$GITHUB_WORKSPACE" >> "$GITHUB_WORKSPACE/dist/agbcc.log" 2>&1
       - name: Compilar Esmeralda con los personajes nuevos
-        run: make -j2
+        run: |
+          make -j2 > dist/build.log 2>&1 || { tail -80 dist/build.log; exit 1; }
+          tail -10 dist/build.log
       - name: Comprobar los datos realmente compilados
         run: |
           python3 valdara/verify_compiled_art.py
@@ -48,6 +51,7 @@ jobs:
               p.unlink()
           PY
       - name: Guardar ROM y comprobaciones
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: Valdara-Esmeralda-arte-aprobado
