@@ -31,6 +31,8 @@ jobs:
         run: |
           python3 valdara/install_port.py
           python3 valdara/install_motion.py
+          python3 valdara/intro/install.py
+          python3 valdara/intro/test_intro.py
           git diff --exit-code -- src/data/object_events/object_event_anims.h src/field_player_avatar.c src/event_object_movement.c
       - name: Build original agbcc compiler
         run: |
@@ -62,7 +64,7 @@ jobs:
               for folder in ['valdara','data/maps','data/layouts','src/data','graphics/object_events','graphics/trainers']:
                   for p in Path(folder).rglob('*'):
                       if p.is_file() and p.suffix not in ['.o','.4bpp','.lz','.gbapal','.pyc']:z.write(p)
-              for p in ['src/new_game.c','src/overworld.c','data/event_scripts.s']:z.write(p)
+              for p in ['src/new_game.c','src/overworld.c','src/main_menu.c','src/valdara_intro_text.h','data/event_scripts.s']:z.write(p)
           PY
           git rev-parse HEAD > dist/commit.txt
       - uses: actions/upload-artifact@v4
