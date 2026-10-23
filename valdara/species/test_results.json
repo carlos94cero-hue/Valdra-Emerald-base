@@ -1,0 +1,12 @@
+{
+  "registered_names": 250,
+  "six_stat_profiles_active": 55,
+  "original_art_active": 11,
+  "type_pairs_exact": 160,
+  "type_unavailable_or_ambiguous": 90,
+  "preserved_ability_specs": 52,
+  "supported_evolutions_active": 2,
+  "pending_species_original_art": 239,
+  "rom_created": false,
+  "status": "PASS static native table tests"
+}

@@ -447,4 +447,6 @@
 #define SPECIES_UNOWN_EMARK (SPECIES_UNOWN_B + 25)
 #define SPECIES_UNOWN_QMARK (SPECIES_UNOWN_B + 26)
 
+#include "constants/valdara_species.h"
+
 #endif  // GUARD_CONSTANTS_SPECIES_H

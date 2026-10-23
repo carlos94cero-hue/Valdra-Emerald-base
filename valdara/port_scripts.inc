@@ -11,10 +11,10 @@ PuertoBrisa_Elder::
 	goto_if_set FLAG_SYS_POKEMON_GET, PuertoBrisa_ElderAfter
 	msgbox PuertoBrisa_TextChoose, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, PuertoBrisa_GiveFemale
-	givemon SPECIES_NIDORAN_M, 5
+	givemon SPECIES_VALDARA_001, 5
 	goto PuertoBrisa_Given
 PuertoBrisa_GiveFemale:
-	givemon SPECIES_NIDORAN_F, 5
+	givemon SPECIES_VALDARA_002, 5
 PuertoBrisa_Given:
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_B_DASH
@@ -133,7 +133,7 @@ PuertoBrisa_RouteSign::
 PuertoBrisa_TextMom:
 	.string "Por fin llegamos a Puerto Brisa.\nDescansaré mientras buscas ayuda.\pDicen que en Ciudad Salvia tienen\nla medicina que necesito.$"
 PuertoBrisa_TextChoose:
-	.string "Vas a salir del puerto, ¿verdad?\nLleva un compañero contigo.\pTengo dos NIDORAN.\n¿Prefieres a la hembra?\pSÍ: NIDORAN hembra.\nNO: NIDORAN macho.$"
+	.string "Vas a salir del puerto, ¿verdad?\nLleva un compañero contigo.\pTengo dos ESCUALÍN.\n¿Prefieres a la hembra?\pSÍ: ESCUALÍN hembra.\nNO: ESCUALÍN macho.$"
 PuertoBrisa_TextGiven:
 	.string "Cuida de tu nuevo compañero.\nVuestro vínculo empieza hoy.\pEn la hierba de la Ruta 01\nencontrarás otros NEVARIOS.$"
 PuertoBrisa_TextElderAfter:

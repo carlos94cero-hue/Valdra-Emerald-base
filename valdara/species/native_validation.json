@@ -1,0 +1,1557 @@
+{
+  "mapped_species": 250,
+  "names_active": 250,
+  "approved_6_stats_active": 55,
+  "approved_stat_variants_preserved": 12,
+  "types_active_exact_supported": 160,
+  "types_pending_unimplemented_or_ambiguous": 90,
+  "original_graphics_active": 11,
+  "original_graphics_pending": 239,
+  "abilities_effects_await_battle_engine": 24,
+  "approved_evolutions_deferred": 14,
+  "inherited_emerald_stats_temporary": 195,
+  "engine_slot_map": {
+    "1": {
+      "slot": 1,
+      "species_constant": "SPECIES_BULBASAUR",
+      "display": "Escualín",
+      "original_title": "Escualín"
+    },
+    "2": {
+      "slot": 2,
+      "species_constant": "SPECIES_IVYSAUR",
+      "display": "Escualín",
+      "original_title": "Escualín"
+    },
+    "3": {
+      "slot": 3,
+      "species_constant": "SPECIES_VENUSAUR",
+      "display": "Escualito",
+      "original_title": "Escualito"
+    },
+    "4": {
+      "slot": 4,
+      "species_constant": "SPECIES_CHARMANDER",
+      "display": "Escualita",
+      "original_title": "Escualita"
+    },
+    "5": {
+      "slot": 5,
+      "species_constant": "SPECIES_CHARMELEON",
+      "display": "Escuarón",
+      "original_title": "Escuarón"
+    },
+    "6": {
+      "slot": 6,
+      "species_constant": "SPECIES_CHARIZARD",
+      "display": "Escuarina",
+      "original_title": "Escuarina"
+    },
+    "7": {
+      "slot": 7,
+      "species_constant": "SPECIES_SQUIRTLE",
+      "display": "Guardal",
+      "original_title": "Guardal"
+    },
+    "8": {
+      "slot": 8,
+      "species_constant": "SPECIES_WARTORTLE",
+      "display": "Abiskar",
+      "original_title": "Abiskar"
+    },
+    "9": {
+      "slot": 9,
+      "species_constant": "SPECIES_BLASTOISE",
+      "display": "Terraleta",
+      "original_title": "Terraleta"
+    },
+    "10": {
+      "slot": 10,
+      "species_constant": "SPECIES_CATERPIE",
+      "display": "Guardal",
+      "original_title": "Guardal"
+    },
+    "11": {
+      "slot": 11,
+      "species_constant": "SPECIES_METAPOD",
+      "display": "Abiskar",
+      "original_title": "Abiskar"
+    },
+    "12": {
+      "slot": 12,
+      "species_constant": "SPECIES_BUTTERFREE",
+      "display": "Terraleta",
+      "original_title": "Terraleta"
+    },
+    "13": {
+      "slot": 13,
+      "species_constant": "SPECIES_WEEDLE",
+      "display": "Alivín",
+      "original_title": "Alivín"
+    },
+    "14": {
+      "slot": 14,
+      "species_constant": "SPECIES_KAKUNA",
+      "display": "Celestín",
+      "original_title": "Celestín"
+    },
+    "15": {
+      "slot": 15,
+      "species_constant": "SPECIES_BEEDRILL",
+      "display": "Aeraluz",
+      "original_title": "Aeraluz"
+    },
+    "16": {
+      "slot": 16,
+      "species_constant": "SPECIES_PIDGEY",
+      "display": "Nigralis",
+      "original_title": "Nigralis"
+    },
+    "17": {
+      "slot": 17,
+      "species_constant": "SPECIES_PIDGEOTTO",
+      "display": "Terravelo",
+      "original_title": "Terravelo"
+    },
+    "18": {
+      "slot": 18,
+      "species_constant": "SPECIES_PIDGEOT",
+      "display": "Musgín",
+      "original_title": "Musgín"
+    },
+    "19": {
+      "slot": 19,
+      "species_constant": "SPECIES_RATTATA",
+      "display": "Muscalio",
+      "original_title": "Muscalio"
+    },
+    "20": {
+      "slot": 20,
+      "species_constant": "SPECIES_RATICATE",
+      "display": "Corazal",
+      "original_title": "Corazal"
+    },
+    "21": {
+      "slot": 21,
+      "species_constant": "SPECIES_SPEAROW",
+      "display": "Brisín",
+      "original_title": "Brisín"
+    },
+    "22": {
+      "slot": 22,
+      "species_constant": "SPECIES_FEAROW",
+      "display": "Brisauro",
+      "original_title": "Brisauro"
+    },
+    "23": {
+      "slot": 23,
+      "species_constant": "SPECIES_EKANS",
+      "display": "Ascual",
+      "original_title": "Ascual"
+    },
+    "24": {
+      "slot": 24,
+      "species_constant": "SPECIES_ARBOK",
+      "display": "Fulgaz",
+      "original_title": "Fulgaz"
+    },
+    "25": {
+      "slot": 25,
+      "species_constant": "SPECIES_PIKACHU",
+      "display": "Guijín",
+      "original_title": "Guijín"
+    },
+    "26": {
+      "slot": 26,
+      "species_constant": "SPECIES_RAICHU",
+      "display": "Taladón",
+      "original_title": "Taladón"
+    },
+    "27": {
+      "slot": 27,
+      "species_constant": "SPECIES_SANDSHREW",
+      "display": "Noctila",
+      "original_title": "Noctila"
+    },
+    "28": {
+      "slot": 28,
+      "species_constant": "SPECIES_SANDSLASH",
+      "display": "Velunara",
+      "original_title": "Velunara"
+    },
+    "29": {
+      "slot": 29,
+      "species_constant": "SPECIES_NIDORAN_F",
+      "display": "Lúmori",
+      "original_title": "Lúmori"
+    },
+    "30": {
+      "slot": 30,
+      "species_constant": "SPECIES_NIDORINA",
+      "display": "Cervaluz",
+      "original_title": "Cervaluz"
+    },
+    "31": {
+      "slot": 31,
+      "species_constant": "SPECIES_NIDOQUEEN",
+      "display": "Silvarion",
+      "original_title": "Silvarion"
+    },
+    "32": {
+      "slot": 32,
+      "species_constant": "SPECIES_NIDORAN_M",
+      "display": "Neril",
+      "original_title": "Neril"
+    },
+    "33": {
+      "slot": 33,
+      "species_constant": "SPECIES_NIDORINO",
+      "display": "Maredris",
+      "original_title": "Maredris"
+    },
+    "34": {
+      "slot": 34,
+      "species_constant": "SPECIES_NIDOKING",
+      "display": "Thaloryn",
+      "original_title": "Thaloryn"
+    },
+    "35": {
+      "slot": 35,
+      "species_constant": "SPECIES_CLEFAIRY",
+      "display": "Petral",
+      "original_title": "Petral"
+    },
+    "36": {
+      "slot": 36,
+      "species_constant": "SPECIES_CLEFABLE",
+      "display": "Runagor",
+      "original_title": "Runagor"
+    },
+    "37": {
+      "slot": 37,
+      "species_constant": "SPECIES_VULPIX",
+      "display": "Monolyth",
+      "original_title": "Monolyth"
+    },
+    "38": {
+      "slot": 38,
+      "species_constant": "SPECIES_NINETALES",
+      "display": "Umbril",
+      "original_title": "Umbril"
+    },
+    "39": {
+      "slot": 39,
+      "species_constant": "SPECIES_JIGGLYPUFF",
+      "display": "Nocteral",
+      "original_title": "Nocteral"
+    },
+    "40": {
+      "slot": 40,
+      "species_constant": "SPECIES_WIGGLYTUFF",
+      "display": "Umbraxis",
+      "original_title": "Umbraxis"
+    },
+    "41": {
+      "slot": 41,
+      "species_constant": "SPECIES_ZUBAT",
+      "display": "Astrel",
+      "original_title": "Astrel"
+    },
+    "42": {
+      "slot": 42,
+      "species_constant": "SPECIES_GOLBAT",
+      "display": "Grifaluz",
+      "original_title": "Grifaluz"
+    },
+    "43": {
+      "slot": 43,
+      "species_constant": "SPECIES_ODDISH",
+      "display": "Asterion",
+      "original_title": "Asterion"
+    },
+    "44": {
+      "slot": 44,
+      "species_constant": "SPECIES_GLOOM",
+      "display": "Brumín",
+      "original_title": "Brumín"
+    },
+    "45": {
+      "slot": 45,
+      "species_constant": "SPECIES_VILEPLUME",
+      "display": "Nébular",
+      "original_title": "Nébular"
+    },
+    "46": {
+      "slot": 46,
+      "species_constant": "SPECIES_PARAS",
+      "display": "Pantheia",
+      "original_title": "Pantheia"
+    },
+    "47": {
+      "slot": 47,
+      "species_constant": "SPECIES_PARASECT",
+      "display": "Drakil",
+      "original_title": "Drakil"
+    },
+    "48": {
+      "slot": 48,
+      "species_constant": "SPECIES_VENONAT",
+      "display": "Drakhor",
+      "original_title": "Drakhor"
+    },
+    "49": {
+      "slot": 49,
+      "species_constant": "SPECIES_VENOMOTH",
+      "display": "Drakaryon",
+      "original_title": "Drakaryon"
+    },
+    "50": {
+      "slot": 50,
+      "species_constant": "SPECIES_DIGLETT",
+      "display": "Ferrín",
+      "original_title": "Ferrín"
+    },
+    "51": {
+      "slot": 51,
+      "species_constant": "SPECIES_DUGTRIO",
+      "display": "Ferrumbral",
+      "original_title": "Ferrumbral"
+    },
+    "52": {
+      "slot": 52,
+      "species_constant": "SPECIES_MEOWTH",
+      "display": "Ferratán",
+      "original_title": "Ferratán"
+    },
+    "53": {
+      "slot": 53,
+      "species_constant": "SPECIES_PERSIAN",
+      "display": "Cristel",
+      "original_title": "Cristel"
+    },
+    "54": {
+      "slot": 54,
+      "species_constant": "SPECIES_PSYDUCK",
+      "display": "Prismora",
+      "original_title": "Prismora"
+    },
+    "55": {
+      "slot": 55,
+      "species_constant": "SPECIES_GOLDUCK",
+      "display": "Sombril",
+      "original_title": "Sombril"
+    },
+    "56": {
+      "slot": 56,
+      "species_constant": "SPECIES_MANKEY",
+      "display": "Velumbria",
+      "original_title": "Velumbria"
+    },
+    "57": {
+      "slot": 57,
+      "species_constant": "SPECIES_PRIMEAPE",
+      "display": "Nocthar",
+      "original_title": "Nocthar"
+    },
+    "58": {
+      "slot": 58,
+      "species_constant": "SPECIES_GROWLITHE",
+      "display": "Caprín",
+      "original_title": "Caprín"
+    },
+    "59": {
+      "slot": 59,
+      "species_constant": "SPECIES_ARCANINE",
+      "display": "Montarok",
+      "original_title": "Montarok"
+    },
+    "60": {
+      "slot": 60,
+      "species_constant": "SPECIES_POLIWAG",
+      "display": "Aurélix",
+      "original_title": "Aurélix"
+    },
+    "61": {
+      "slot": 61,
+      "species_constant": "SPECIES_POLIWHIRL",
+      "display": "Nivalis",
+      "original_title": "Nivalis"
+    },
+    "62": {
+      "slot": 62,
+      "species_constant": "SPECIES_POLIWRATH",
+      "display": "Céniora",
+      "original_title": "Céniora"
+    },
+    "63": {
+      "slot": 63,
+      "species_constant": "SPECIES_ABRA",
+      "display": "Lianín",
+      "original_title": "Lianín"
+    },
+    "64": {
+      "slot": 64,
+      "species_constant": "SPECIES_KADABRA",
+      "display": "Serpelia",
+      "original_title": "Serpelia"
+    },
+    "65": {
+      "slot": 65,
+      "species_constant": "SPECIES_ALAKAZAM",
+      "display": "Verdakra",
+      "original_title": "Verdakra"
+    },
+    "66": {
+      "slot": 66,
+      "species_constant": "SPECIES_MACHOP",
+      "display": "Lúmina",
+      "original_title": "Lúmina"
+    },
+    "67": {
+      "slot": 67,
+      "species_constant": "SPECIES_MACHOKE",
+      "display": "Farolume",
+      "original_title": "Farolume"
+    },
+    "68": {
+      "slot": 68,
+      "species_constant": "SPECIES_MACHAMP",
+      "display": "Ribul",
+      "original_title": "Ribul"
+    },
+    "69": {
+      "slot": 69,
+      "species_constant": "SPECIES_BELLSPROUT",
+      "display": "Croakmar",
+      "original_title": "Croakmar"
+    },
+    "70": {
+      "slot": 70,
+      "species_constant": "SPECIES_WEEPINBELL",
+      "display": "Pantagor",
+      "original_title": "Pantagor"
+    },
+    "71": {
+      "slot": 71,
+      "species_constant": "SPECIES_VICTREEBEL",
+      "display": "Florín",
+      "original_title": "Florín"
+    },
+    "72": {
+      "slot": 72,
+      "species_constant": "SPECIES_TENTACOOL",
+      "display": "Orquidea",
+      "original_title": "Orquidea"
+    },
+    "73": {
+      "slot": 73,
+      "species_constant": "SPECIES_TENTACRUEL",
+      "display": "Neblín",
+      "original_title": "Neblín"
+    },
+    "74": {
+      "slot": 74,
+      "species_constant": "SPECIES_GEODUDE",
+      "display": "Espectruma",
+      "original_title": "Espectruma"
+    },
+    "75": {
+      "slot": 75,
+      "species_constant": "SPECIES_GRAVELER",
+      "display": "Caimín",
+      "original_title": "Caimín"
+    },
+    "76": {
+      "slot": 76,
+      "species_constant": "SPECIES_GOLEM",
+      "display": "Dracaim",
+      "original_title": "Dracaim"
+    },
+    "77": {
+      "slot": 77,
+      "species_constant": "SPECIES_PONYTA",
+      "display": "Raicel",
+      "original_title": "Raicel"
+    },
+    "78": {
+      "slot": 78,
+      "species_constant": "SPECIES_RAPIDASH",
+      "display": "Entarbol",
+      "original_title": "Entarbol"
+    },
+    "79": {
+      "slot": 79,
+      "species_constant": "SPECIES_SLOWPOKE",
+      "display": "Arbolith",
+      "original_title": "Arbolith"
+    },
+    "80": {
+      "slot": 80,
+      "species_constant": "SPECIES_SLOWBRO",
+      "display": "Aurial",
+      "original_title": "Aurial"
+    },
+    "81": {
+      "slot": 81,
+      "species_constant": "SPECIES_MAGNEMITE",
+      "display": "Celestrin",
+      "original_title": "Celestrin"
+    },
+    "82": {
+      "slot": 82,
+      "species_constant": "SPECIES_MAGNETON",
+      "display": "Solerya",
+      "original_title": "Solerya"
+    },
+    "83": {
+      "slot": 83,
+      "species_constant": "SPECIES_FARFETCHD",
+      "display": "Somnilo",
+      "original_title": "Somnilo"
+    },
+    "84": {
+      "slot": 84,
+      "species_constant": "SPECIES_DODUO",
+      "display": "Oniriel",
+      "original_title": "Oniriel"
+    },
+    "85": {
+      "slot": 85,
+      "species_constant": "SPECIES_DODRIO",
+      "display": "Morfeon",
+      "original_title": "Morfeon"
+    },
+    "86": {
+      "slot": 86,
+      "species_constant": "SPECIES_SEEL",
+      "display": "Cronel",
+      "original_title": "Cronel"
+    },
+    "87": {
+      "slot": 87,
+      "species_constant": "SPECIES_DEWGONG",
+      "display": "Temporyn",
+      "original_title": "Temporyn"
+    },
+    "88": {
+      "slot": 88,
+      "species_constant": "SPECIES_GRIMER",
+      "display": "Aethernox",
+      "original_title": "Aethernox"
+    },
+    "89": {
+      "slot": 89,
+      "species_constant": "SPECIES_MUK",
+      "display": "Velkín",
+      "original_title": "Velkín"
+    },
+    "90": {
+      "slot": 90,
+      "species_constant": "SPECIES_SHELLDER",
+      "display": "Arcanvel",
+      "original_title": "Arcanvel"
+    },
+    "91": {
+      "slot": 91,
+      "species_constant": "SPECIES_CLOYSTER",
+      "display": "Velkarion",
+      "original_title": "Velkarion"
+    },
+    "92": {
+      "slot": 92,
+      "species_constant": "SPECIES_GASTLY",
+      "display": "Fenirín",
+      "original_title": "Fenirín"
+    },
+    "93": {
+      "slot": 93,
+      "species_constant": "SPECIES_HAUNTER",
+      "display": "Fenrakar",
+      "original_title": "Fenrakar"
+    },
+    "94": {
+      "slot": 94,
+      "species_constant": "SPECIES_GENGAR",
+      "display": "Fenrath",
+      "original_title": "Fenrath"
+    },
+    "95": {
+      "slot": 95,
+      "species_constant": "SPECIES_ONIX",
+      "display": "Serpín",
+      "original_title": "Serpín"
+    },
+    "96": {
+      "slot": 96,
+      "species_constant": "SPECIES_DROWZEE",
+      "display": "Basilor",
+      "original_title": "Basilor"
+    },
+    "97": {
+      "slot": 97,
+      "species_constant": "SPECIES_HYPNO",
+      "display": "Basiliskar",
+      "original_title": "Basiliskar"
+    },
+    "98": {
+      "slot": 98,
+      "species_constant": "SPECIES_KRABBY",
+      "display": "Quimerín",
+      "original_title": "Quimerín"
+    },
+    "99": {
+      "slot": 99,
+      "species_constant": "SPECIES_KINGLER",
+      "display": "Quimerox",
+      "original_title": "Quimerox"
+    },
+    "100": {
+      "slot": 100,
+      "species_constant": "SPECIES_VOLTORB",
+      "display": "Quimerath",
+      "original_title": "Quimerath"
+    },
+    "101": {
+      "slot": 101,
+      "species_constant": "SPECIES_ELECTRODE",
+      "display": "Silfín",
+      "original_title": "Silfín"
+    },
+    "102": {
+      "slot": 102,
+      "species_constant": "SPECIES_EXEGGCUTE",
+      "display": "Silfaria",
+      "original_title": "Silfaria"
+    },
+    "103": {
+      "slot": 103,
+      "species_constant": "SPECIES_EXEGGUTOR",
+      "display": "Grifín",
+      "original_title": "Grifín"
+    },
+    "104": {
+      "slot": 104,
+      "species_constant": "SPECIES_CUBONE",
+      "display": "Grifalor",
+      "original_title": "Grifalor"
+    },
+    "105": {
+      "slot": 105,
+      "species_constant": "SPECIES_MAROWAK",
+      "display": "Grifaryon",
+      "original_title": "Grifaryon"
+    },
+    "106": {
+      "slot": 106,
+      "species_constant": "SPECIES_HITMONLEE",
+      "display": "Coralyn",
+      "original_title": "Coralyn"
+    },
+    "107": {
+      "slot": 107,
+      "species_constant": "SPECIES_HITMONCHAN",
+      "display": "Coralyth",
+      "original_title": "Coralyth"
+    },
+    "108": {
+      "slot": 108,
+      "species_constant": "SPECIES_LICKITUNG",
+      "display": "Abyssul",
+      "original_title": "Abyssul"
+    },
+    "109": {
+      "slot": 109,
+      "species_constant": "SPECIES_KOFFING",
+      "display": "Abyssur",
+      "original_title": "Abyssur"
+    },
+    "110": {
+      "slot": 110,
+      "species_constant": "SPECIES_WEEZING",
+      "display": "Thalun",
+      "original_title": "Thalun"
+    },
+    "111": {
+      "slot": 111,
+      "species_constant": "SPECIES_RHYHORN",
+      "display": "Petramín",
+      "original_title": "Petramín"
+    },
+    "112": {
+      "slot": 112,
+      "species_constant": "SPECIES_RHYDON",
+      "display": "Petrarok",
+      "original_title": "Petrarok"
+    },
+    "113": {
+      "slot": 113,
+      "species_constant": "SPECIES_CHANSEY",
+      "display": "Monumentor",
+      "original_title": "Monumenthor"
+    },
+    "114": {
+      "slot": 114,
+      "species_constant": "SPECIES_TANGELA",
+      "display": "Espejina",
+      "original_title": "Espejina"
+    },
+    "115": {
+      "slot": 115,
+      "species_constant": "SPECIES_KANGASKHAN",
+      "display": "Lúminar",
+      "original_title": "Lúminar"
+    },
+    "116": {
+      "slot": 116,
+      "species_constant": "SPECIES_HORSEA",
+      "display": "Vexín",
+      "original_title": "Vexín"
+    },
+    "117": {
+      "slot": 117,
+      "species_constant": "SPECIES_SEADRA",
+      "display": "Vexar",
+      "original_title": "Vexar"
+    },
+    "118": {
+      "slot": 118,
+      "species_constant": "SPECIES_GOLDEEN",
+      "display": "Vexaryon",
+      "original_title": "Vexaryon"
+    },
+    "119": {
+      "slot": 119,
+      "species_constant": "SPECIES_SEAKING",
+      "display": "Florán",
+      "original_title": "Florán"
+    },
+    "120": {
+      "slot": 120,
+      "species_constant": "SPECIES_STARYU",
+      "display": "Florath",
+      "original_title": "Florath"
+    },
+    "121": {
+      "slot": 121,
+      "species_constant": "SPECIES_STARMIE",
+      "display": "Mirín",
+      "original_title": "Mirín"
+    },
+    "122": {
+      "slot": 122,
+      "species_constant": "SPECIES_MR_MIME",
+      "display": "Mirath",
+      "original_title": "Mirath"
+    },
+    "123": {
+      "slot": 123,
+      "species_constant": "SPECIES_SCYTHER",
+      "display": "Nimbos",
+      "original_title": "Nimbos"
+    },
+    "124": {
+      "slot": 124,
+      "species_constant": "SPECIES_JYNX",
+      "display": "Nimbaris",
+      "original_title": "Nimbaris"
+    },
+    "125": {
+      "slot": 125,
+      "species_constant": "SPECIES_ELECTABUZZ",
+      "display": "Orbex",
+      "original_title": "Orbex"
+    },
+    "126": {
+      "slot": 126,
+      "species_constant": "SPECIES_MAGMAR",
+      "display": "Umbrafín",
+      "original_title": "Umbrafín"
+    },
+    "127": {
+      "slot": 127,
+      "species_constant": "SPECIES_PINSIR",
+      "display": "Umbrafen",
+      "original_title": "Umbrafen"
+    },
+    "128": {
+      "slot": 128,
+      "species_constant": "SPECIES_TAUROS",
+      "display": "Nebulith",
+      "original_title": "Nebulith"
+    },
+    "129": {
+      "slot": 129,
+      "species_constant": "SPECIES_MAGIKARP",
+      "display": "Nebulyn",
+      "original_title": "Nebulyn"
+    },
+    "130": {
+      "slot": 130,
+      "species_constant": "SPECIES_GYARADOS",
+      "display": "Chronix",
+      "original_title": "Chronix"
+    },
+    "131": {
+      "slot": 131,
+      "species_constant": "SPECIES_LAPRAS",
+      "display": "Rayín",
+      "original_title": "Rayín"
+    },
+    "132": {
+      "slot": 132,
+      "species_constant": "SPECIES_DITTO",
+      "display": "Rayluz",
+      "original_title": "Rayluz"
+    },
+    "133": {
+      "slot": 133,
+      "species_constant": "SPECIES_EEVEE",
+      "display": "Celín",
+      "original_title": "Celín"
+    },
+    "134": {
+      "slot": 134,
+      "species_constant": "SPECIES_VAPOREON",
+      "display": "Celerío",
+      "original_title": "Celerío"
+    },
+    "135": {
+      "slot": 135,
+      "species_constant": "SPECIES_JOLTEON",
+      "display": "Velagavi",
+      "original_title": "Velagavi"
+    },
+    "136": {
+      "slot": 136,
+      "species_constant": "SPECIES_FLAREON",
+      "display": "Maringavi",
+      "original_title": "Maringavi"
+    },
+    "137": {
+      "slot": 137,
+      "species_constant": "SPECIES_PORYGON",
+      "display": "Micelín",
+      "original_title": "Micelín"
+    },
+    "138": {
+      "slot": 138,
+      "species_constant": "SPECIES_OMANYTE",
+      "display": "Micelar",
+      "original_title": "Micelar"
+    },
+    "139": {
+      "slot": 139,
+      "species_constant": "SPECIES_OMASTAR",
+      "display": "Pedrín",
+      "original_title": "Pedrín"
+    },
+    "140": {
+      "slot": 140,
+      "species_constant": "SPECIES_KABUTO",
+      "display": "Pedracor",
+      "original_title": "Pedracor"
+    },
+    "141": {
+      "slot": 141,
+      "species_constant": "SPECIES_KABUTOPS",
+      "display": "Monagor",
+      "original_title": "Monagor"
+    },
+    "142": {
+      "slot": 142,
+      "species_constant": "SPECIES_AERODACTYL",
+      "display": "Sombrisco",
+      "original_title": "Sombrisco"
+    },
+    "143": {
+      "slot": 143,
+      "species_constant": "SPECIES_SNORLAX",
+      "display": "Umbrosca",
+      "original_title": "Umbrosca"
+    },
+    "144": {
+      "slot": 144,
+      "species_constant": "SPECIES_ARTICUNO",
+      "display": "Umbrogor",
+      "original_title": "Umbrogor"
+    },
+    "145": {
+      "slot": 145,
+      "species_constant": "SPECIES_ZAPDOS",
+      "display": "Lodalín",
+      "original_title": "Lodalín"
+    },
+    "146": {
+      "slot": 146,
+      "species_constant": "SPECIES_MOLTRES",
+      "display": "Lodamar",
+      "original_title": "Lodamar"
+    },
+    "147": {
+      "slot": 147,
+      "species_constant": "SPECIES_DRATINI",
+      "display": "Nenufín",
+      "original_title": "Nenufín"
+    },
+    "148": {
+      "slot": 148,
+      "species_constant": "SPECIES_DRAGONAIR",
+      "display": "Nenurío",
+      "original_title": "Nenurío"
+    },
+    "149": {
+      "slot": 149,
+      "species_constant": "SPECIES_DRAGONITE",
+      "display": "Nenurón",
+      "original_title": "Nenurón"
+    },
+    "150": {
+      "slot": 150,
+      "species_constant": "SPECIES_MEWTWO",
+      "display": "Nubelín",
+      "original_title": "Nubelín"
+    },
+    "151": {
+      "slot": 151,
+      "species_constant": "SPECIES_MEW",
+      "display": "Nubeala",
+      "original_title": "Nubeala"
+    },
+    "152": {
+      "slot": 152,
+      "species_constant": "SPECIES_CHIKORITA",
+      "display": "Auralobo",
+      "original_title": "Auralobo"
+    },
+    "153": {
+      "slot": 153,
+      "species_constant": "SPECIES_BAYLEEF",
+      "display": "Eldarion",
+      "original_title": "Eldarion"
+    },
+    "154": {
+      "slot": 154,
+      "species_constant": "SPECIES_MEGANIUM",
+      "display": "Memnorys",
+      "original_title": "Memnorys"
+    },
+    "155": {
+      "slot": 155,
+      "species_constant": "SPECIES_CYNDAQUIL",
+      "display": "Nevaryx",
+      "original_title": "Nevaryx"
+    },
+    "156": {
+      "slot": 156,
+      "species_constant": "SPECIES_QUILAVA",
+      "display": "Ignarok",
+      "original_title": "Ignarok"
+    },
+    "157": {
+      "slot": 157,
+      "species_constant": "SPECIES_TYPHLOSION",
+      "display": "Thalassyr",
+      "original_title": "Thalassyr"
+    },
+    "158": {
+      "slot": 158,
+      "species_constant": "SPECIES_TOTODILE",
+      "display": "Aetherion",
+      "original_title": "Aetherion"
+    },
+    "159": {
+      "slot": 159,
+      "species_constant": "SPECIES_CROCONAW",
+      "display": "Nevarión",
+      "original_title": "Nevarión"
+    },
+    "160": {
+      "slot": 160,
+      "species_constant": "SPECIES_FERALIGATR",
+      "display": "Umbrálix",
+      "original_title": "Umbrálix"
+    },
+    "161": {
+      "slot": 161,
+      "species_constant": "SPECIES_SENTRET",
+      "display": "Límbora",
+      "original_title": "Límbora"
+    },
+    "162": {
+      "slot": 162,
+      "species_constant": "SPECIES_FURRET",
+      "display": "Coralín",
+      "original_title": "Coralín"
+    },
+    "163": {
+      "slot": 163,
+      "species_constant": "SPECIES_HOOTHOOT",
+      "display": "Cantacoral",
+      "original_title": "Cantacoral"
+    },
+    "164": {
+      "slot": 164,
+      "species_constant": "SPECIES_NOCTOWL",
+      "display": "Arrecantor",
+      "original_title": "Arrecantor"
+    },
+    "165": {
+      "slot": 165,
+      "species_constant": "SPECIES_LEDYBA",
+      "display": "Raizín",
+      "original_title": "Raizín"
+    },
+    "166": {
+      "slot": 166,
+      "species_constant": "SPECIES_LEDIAN",
+      "display": "Ciervalma",
+      "original_title": "Ciervalma"
+    },
+    "167": {
+      "slot": 167,
+      "species_constant": "SPECIES_SPINARAK",
+      "display": "Raicestral",
+      "original_title": "Raicestral"
+    },
+    "168": {
+      "slot": 168,
+      "species_constant": "SPECIES_ARIADOS",
+      "display": "Ritualín",
+      "original_title": "Ritualín"
+    },
+    "169": {
+      "slot": 169,
+      "species_constant": "SPECIES_CROBAT",
+      "display": "Zorritual",
+      "original_title": "Zorritual"
+    },
+    "170": {
+      "slot": 170,
+      "species_constant": "SPECIES_CHINCHOU",
+      "display": "Umbrazorro",
+      "original_title": "Umbrazorro"
+    },
+    "171": {
+      "slot": 171,
+      "species_constant": "SPECIES_LANTURN",
+      "display": "Escarchín",
+      "original_title": "Escarchín"
+    },
+    "172": {
+      "slot": 172,
+      "species_constant": "SPECIES_PICHU",
+      "display": "Escardraco",
+      "original_title": "Escardraco"
+    },
+    "173": {
+      "slot": 173,
+      "species_constant": "SPECIES_CLEFFA",
+      "display": "Ventidraco",
+      "original_title": "Ventisdraco"
+    },
+    "174": {
+      "slot": 174,
+      "species_constant": "SPECIES_IGGLYBUFF",
+      "display": "Astrogín",
+      "original_title": "Astrogín"
+    },
+    "175": {
+      "slot": 175,
+      "species_constant": "SPECIES_TOGEPI",
+      "display": "Felinova",
+      "original_title": "Felinova"
+    },
+    "176": {
+      "slot": 176,
+      "species_constant": "SPECIES_TOGETIC",
+      "display": "Cosmifél",
+      "original_title": "Cosmifél"
+    },
+    "177": {
+      "slot": 177,
+      "species_constant": "SPECIES_NATU",
+      "display": "Salcrab",
+      "original_title": "Salcrab"
+    },
+    "178": {
+      "slot": 178,
+      "species_constant": "SPECIES_XATU",
+      "display": "Salmar",
+      "original_title": "Salmar"
+    },
+    "179": {
+      "slot": 179,
+      "species_constant": "SPECIES_MAREEP",
+      "display": "Crustálido",
+      "original_title": "Crustálido"
+    },
+    "180": {
+      "slot": 180,
+      "species_constant": "SPECIES_FLAAFFY",
+      "display": "Marelín",
+      "original_title": "Marelín"
+    },
+    "181": {
+      "slot": 181,
+      "species_constant": "SPECIES_AMPHAROS",
+      "display": "Coralux",
+      "original_title": "Coralux"
+    },
+    "182": {
+      "slot": 182,
+      "species_constant": "SPECIES_BELLOSSOM",
+      "display": "Abisalux",
+      "original_title": "Abisalux"
+    },
+    "183": {
+      "slot": 183,
+      "species_constant": "SPECIES_MARILL",
+      "display": "Manglín",
+      "original_title": "Manglín"
+    },
+    "184": {
+      "slot": 184,
+      "species_constant": "SPECIES_AZUMARILL",
+      "display": "Algalín",
+      "original_title": "Algalín"
+    },
+    "185": {
+      "slot": 185,
+      "species_constant": "SPECIES_SUDOWOODO",
+      "display": "Maestral",
+      "original_title": "Maestral"
+    },
+    "186": {
+      "slot": 186,
+      "species_constant": "SPECIES_POLITOED",
+      "display": "Tempestir",
+      "original_title": "Tempestir"
+    },
+    "187": {
+      "slot": 187,
+      "species_constant": "SPECIES_HOPPIP",
+      "display": "Aerisca",
+      "original_title": "Aerisca"
+    },
+    "188": {
+      "slot": 188,
+      "species_constant": "SPECIES_SKIPLOOM",
+      "display": "Tormáguila",
+      "original_title": "Tormáguila"
+    },
+    "189": {
+      "slot": 189,
+      "species_constant": "SPECIES_JUMPLUFF",
+      "display": "Lúmin",
+      "original_title": "Lúmin"
+    },
+    "190": {
+      "slot": 190,
+      "species_constant": "SPECIES_AIPOM",
+      "display": "Sombraluz",
+      "original_title": "Sombraluz"
+    },
+    "191": {
+      "slot": 191,
+      "species_constant": "SPECIES_SUNKERN",
+      "display": "Abismor",
+      "original_title": "Abismor"
+    },
+    "192": {
+      "slot": 192,
+      "species_constant": "SPECIES_SUNFLORA",
+      "display": "Arborín",
+      "original_title": "Arborín"
+    },
+    "193": {
+      "slot": 193,
+      "species_constant": "SPECIES_YANMA",
+      "display": "Terralín",
+      "original_title": "Terralín"
+    },
+    "194": {
+      "slot": 194,
+      "species_constant": "SPECIES_WOOPER",
+      "display": "Bosqueón",
+      "original_title": "Bosqueón"
+    },
+    "195": {
+      "slot": 195,
+      "species_constant": "SPECIES_QUAGSIRE",
+      "display": "Nimbín",
+      "original_title": "Nimbín"
+    },
+    "196": {
+      "slot": 196,
+      "species_constant": "SPECIES_ESPEON",
+      "display": "Cirín",
+      "original_title": "Cirín"
+    },
+    "197": {
+      "slot": 197,
+      "species_constant": "SPECIES_UMBREON",
+      "display": "Aurélia",
+      "original_title": "Aurélia"
+    },
+    "198": {
+      "slot": 198,
+      "species_constant": "SPECIES_MURKROW",
+      "display": "Umbralo",
+      "original_title": "Umbralo"
+    },
+    "199": {
+      "slot": 199,
+      "species_constant": "SPECIES_SLOWKING",
+      "display": "Fungomal",
+      "original_title": "Fungomal"
+    },
+    "200": {
+      "slot": 200,
+      "species_constant": "SPECIES_MISDREAVUS",
+      "display": "Esporénigm",
+      "original_title": "Esporénigma"
+    },
+    "201": {
+      "slot": 201,
+      "species_constant": "SPECIES_UNOWN",
+      "display": "Riscorn",
+      "original_title": "Riscorn"
+    },
+    "202": {
+      "slot": 202,
+      "species_constant": "SPECIES_WOBBUFFET",
+      "display": "Terracorn",
+      "original_title": "Terracorn"
+    },
+    "203": {
+      "slot": 203,
+      "species_constant": "SPECIES_GIRAFARIG",
+      "display": "Geodrakon",
+      "original_title": "Geodrakon"
+    },
+    "204": {
+      "slot": 204,
+      "species_constant": "SPECIES_PINECO",
+      "display": "Volkrín",
+      "original_title": "Volkrín"
+    },
+    "205": {
+      "slot": 205,
+      "species_constant": "SPECIES_FORRETRESS",
+      "display": "Pionix",
+      "original_title": "Pionix"
+    },
+    "206": {
+      "slot": 206,
+      "species_constant": "SPECIES_DUNSPARCE",
+      "display": "Ignírion",
+      "original_title": "Ignírion"
+    },
+    "207": {
+      "slot": 207,
+      "species_constant": "SPECIES_GLIGAR",
+      "display": "Lumantis",
+      "original_title": "Lumantis"
+    },
+    "208": {
+      "slot": 208,
+      "species_constant": "SPECIES_STEELIX",
+      "display": "Prismantis",
+      "original_title": "Prismantis"
+    },
+    "209": {
+      "slot": 209,
+      "species_constant": "SPECIES_SNUBBULL",
+      "display": "Oráculis",
+      "original_title": "Oráculis"
+    },
+    "210": {
+      "slot": 210,
+      "species_constant": "SPECIES_GRANBULL",
+      "display": "Reflecín",
+      "original_title": "Reflecín"
+    },
+    "211": {
+      "slot": 211,
+      "species_constant": "SPECIES_QWILFISH",
+      "display": "Espexral",
+      "original_title": "Espexral"
+    },
+    "212": {
+      "slot": 212,
+      "species_constant": "SPECIES_SCIZOR",
+      "display": "Miralith",
+      "original_title": "Miralith"
+    },
+    "213": {
+      "slot": 213,
+      "species_constant": "SPECIES_SHUCKLE",
+      "display": "Lumensa",
+      "original_title": "Lumensa"
+    },
+    "214": {
+      "slot": 214,
+      "species_constant": "SPECIES_HERACROSS",
+      "display": "Flamalín",
+      "original_title": "Flamalín"
+    },
+    "215": {
+      "slot": 215,
+      "species_constant": "SPECIES_SNEASEL",
+      "display": "Aurignis",
+      "original_title": "Aurignis"
+    },
+    "216": {
+      "slot": 216,
+      "species_constant": "SPECIES_TEDDIURSA",
+      "display": "Fulgurita",
+      "original_title": "Fulgurita"
+    },
+    "217": {
+      "slot": 217,
+      "species_constant": "SPECIES_URSARING",
+      "display": "Voltaik",
+      "original_title": "Voltaik"
+    },
+    "218": {
+      "slot": 218,
+      "species_constant": "SPECIES_SLUGMA",
+      "display": "Raynex",
+      "original_title": "Raynex"
+    },
+    "219": {
+      "slot": 219,
+      "species_constant": "SPECIES_MAGCARGO",
+      "display": "Abyssén",
+      "original_title": "Abyssén"
+    },
+    "220": {
+      "slot": 220,
+      "species_constant": "SPECIES_SWINUB",
+      "display": "Toxidrak",
+      "original_title": "Toxidrak"
+    },
+    "221": {
+      "slot": 221,
+      "species_constant": "SPECIES_PILOSWINE",
+      "display": "Leviadrén",
+      "original_title": "Leviadrén"
+    },
+    "222": {
+      "slot": 222,
+      "species_constant": "SPECIES_CORSOLA",
+      "display": "Candelín",
+      "original_title": "Candelín"
+    },
+    "223": {
+      "slot": 223,
+      "species_constant": "SPECIES_REMORAID",
+      "display": "Ceravela",
+      "original_title": "Ceravela"
+    },
+    "224": {
+      "slot": 224,
+      "species_constant": "SPECIES_OCTILLERY",
+      "display": "Candelarca",
+      "original_title": "Candelarca"
+    },
+    "225": {
+      "slot": 225,
+      "species_constant": "SPECIES_DELIBIRD",
+      "display": "Velín",
+      "original_title": "Velín"
+    },
+    "226": {
+      "slot": 226,
+      "species_constant": "SPECIES_MANTINE",
+      "display": "Tejumbra",
+      "original_title": "Tejumbra"
+    },
+    "227": {
+      "slot": 227,
+      "species_constant": "SPECIES_SKARMORY",
+      "display": "Telaracna",
+      "original_title": "Telaracna"
+    },
+    "228": {
+      "slot": 228,
+      "species_constant": "SPECIES_HOUNDOUR",
+      "display": "Dunín",
+      "original_title": "Dunín"
+    },
+    "229": {
+      "slot": 229,
+      "species_constant": "SPECIES_HOUNDOOM",
+      "display": "Dunavelo",
+      "original_title": "Dunavelo"
+    },
+    "230": {
+      "slot": 230,
+      "species_constant": "SPECIES_KINGDRA",
+      "display": "Esfingduna",
+      "original_title": "Esfingduna"
+    },
+    "231": {
+      "slot": 231,
+      "species_constant": "SPECIES_PHANPY",
+      "display": "Vidriín",
+      "original_title": "Vidriín"
+    },
+    "232": {
+      "slot": 232,
+      "species_constant": "SPECIES_DONPHAN",
+      "display": "Vitraluz",
+      "original_title": "Vitraluz"
+    },
+    "233": {
+      "slot": 233,
+      "species_constant": "SPECIES_PORYGON2",
+      "display": "Catedrálux",
+      "original_title": "Catedrálux"
+    },
+    "234": {
+      "slot": 234,
+      "species_constant": "SPECIES_STANTLER",
+      "display": "Tremín",
+      "original_title": "Tremín"
+    },
+    "235": {
+      "slot": 235,
+      "species_constant": "SPECIES_SMEARGLE",
+      "display": "Resonel",
+      "original_title": "Resonel"
+    },
+    "236": {
+      "slot": 236,
+      "species_constant": "SPECIES_TYROGUE",
+      "display": "Sismórgano",
+      "original_title": "Sismórgano"
+    },
+    "237": {
+      "slot": 237,
+      "species_constant": "SPECIES_HITMONTOP",
+      "display": "Sintélix",
+      "original_title": "Sintélix"
+    },
+    "238": {
+      "slot": 238,
+      "species_constant": "SPECIES_SMOOCHUM",
+      "display": "Toxenlace",
+      "original_title": "Toxenlace"
+    },
+    "239": {
+      "slot": 239,
+      "species_constant": "SPECIES_ELEKID",
+      "display": "Controlix",
+      "original_title": "Controlix"
+    },
+    "240": {
+      "slot": 240,
+      "species_constant": "SPECIES_MAGBY",
+      "display": "Frigmor",
+      "original_title": "Frigmor"
+    },
+    "241": {
+      "slot": 241,
+      "species_constant": "SPECIES_MILTANK",
+      "display": "Crioblok",
+      "original_title": "Crioblok"
+    },
+    "242": {
+      "slot": 242,
+      "species_constant": "SPECIES_BLISSEY",
+      "display": "Glaciortex",
+      "original_title": "Glaciortex"
+    },
+    "243": {
+      "slot": 243,
+      "species_constant": "SPECIES_RAIKOU",
+      "display": "Sombralgo",
+      "original_title": "Sombralgo"
+    },
+    "244": {
+      "slot": 244,
+      "species_constant": "SPECIES_ENTEI",
+      "display": "Umbrakel",
+      "original_title": "Umbrakel"
+    },
+    "245": {
+      "slot": 245,
+      "species_constant": "SPECIES_SUICUNE",
+      "display": "Eclipsido",
+      "original_title": "Eclipsálido"
+    },
+    "246": {
+      "slot": 246,
+      "species_constant": "SPECIES_LARVITAR",
+      "display": "Obsidión",
+      "original_title": "Obsidión"
+    },
+    "247": {
+      "slot": 247,
+      "species_constant": "SPECIES_PUPITAR",
+      "display": "Fragmentor",
+      "original_title": "Fragmentor"
+    },
+    "248": {
+      "slot": 248,
+      "species_constant": "SPECIES_TYRANITAR",
+      "display": "Colopsia",
+      "original_title": "Colopsia"
+    },
+    "249": {
+      "slot": 249,
+      "species_constant": "SPECIES_LUGIA",
+      "display": "Necralith",
+      "original_title": "Necralith"
+    },
+    "250": {
+      "slot": 250,
+      "species_constant": "SPECIES_HO_OH",
+      "display": "Mentalith",
+      "original_title": "Mentalith"
+    }
+  },
+  "art_palette_indexes": {
+    "tiburon_inicial_m": 2,
+    "tiburon_inicial_f": 0,
+    "guardian_heroico_m": 2,
+    "abisal_villano_m": 2,
+    "explorador_investigador_m": 2,
+    "guardian_heroico_f": 0,
+    "abisal_villano_f": 2,
+    "explorador_investigador_f": 2,
+    "nevarion": 0,
+    "umbralix": 2,
+    "limbora": 1
+  },
+  "status": "native source registration; no ROM built",
+  "approved_evolutions_implemented_simple": [
+    {
+      "from": 13,
+      "to": 14,
+      "level": 18
+    },
+    {
+      "from": 18,
+      "to": 19,
+      "level": 20
+    }
+  ],
+  "ability_runtime_hook": "pending: design specs preserved; not declared functional",
+  "move_runtime_hook": "pending: exclusive movement effects not generated",
+  "art_remaining": 239,
+  "regional_port_starter_ids": [
+    1,
+    2
+  ],
+  "regional_route_01_slots": [
+    131,
+    133,
+    135,
+    137,
+    147,
+    149
+  ],
+  "source_data_sha256": "88514a883464ba6da1b0445638a8c7334c03be44f675d85e460874346056b5d2"
+}
