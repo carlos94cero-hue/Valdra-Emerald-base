@@ -42,7 +42,7 @@ def check():
     for instruction in ['givemon SPECIES_NIDORAN_M, 5','givemon SPECIES_NIDORAN_F, 5','FLAG_SYS_POKEMON_GET']:
         assert instruction in scripts
     data = json.loads((ROOT/'valdara/intro/dialogue.json').read_text())
-    assert data['creatures']=='Neverions'
+    assert data['creatures']=='Nevarios'
     charmap={c:int(h,16) for c,h in re.findall(r"^'(.)'\s*=\s*([0-9A-F]{2})\s*$",(ROOT/'charmap.txt').read_text(),re.M)}
     fonts=(ROOT/'src/fonts.c').read_text()
     widths=list(map(int,re.findall(r'\d+',re.search(r'gFontNormalLatinGlyphWidths\[\]\s*=\s*\{(.*?)\};',fonts,re.S)[1])))
@@ -62,7 +62,7 @@ def check():
     assert roms_before=={str(p):p.stat().st_size for p in ROOT.rglob('*.gba')}
     print('PASS: welcome -> native protagonist selection; name cancellation and final transition')
     print('PASS: same traveler in intro/port; starter still awarded only by port script')
-    print('PASS: Neverions, Spanish glyphs, 216px text bounds, 48px selection window')
+    print('PASS: Nevarios, Spanish glyphs, 216px text bounds, 48px selection window')
     print('PASS: idempotent installer; no ROM generated; existing logo/title untouched')
     print('PENDING: compilation and complete input-driven intro test in the planned ROM-test phase')
 

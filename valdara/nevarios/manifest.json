@@ -1,0 +1,465 @@
+{
+  "schema": "valdara.nevarios.sprites.v1",
+  "game": "Valdara",
+  "creatures_name": "Nevarios",
+  "player_class": "Criador",
+  "capture_item": "Cristal de vínculo",
+  "researcher_dex": "Veloria",
+  "neutral_path_renamed": "Investigador",
+  "other_world": "el Envés",
+  "mythic_trio": [
+    "Umbrálix",
+    "Nevarión",
+    "Límbora"
+  ],
+  "notes": [
+    "Nombres de evoluciones provisionales, sujetos a aprobación.",
+    "El tiburón inicial es una misma especie con dimorfismo sexual.",
+    "Se preserva el sexo en cada crianza y transformación.",
+    "Tipos del trío místico por definir; no se fijan en esta entrega.",
+    "Hoopa/Darkrai/Giratina son referencias narrativas sustituidas, no sprites del juego.",
+    "Arte preparado sin compilación ni registro de nuevas especies en el motor."
+  ],
+  "species": {
+    "tiburon_inicial_m": {
+      "stage": "initial",
+      "sex": "M",
+      "type": [
+        "Agua"
+      ],
+      "route": null,
+      "group": "cria_tiburon",
+      "name": "Inicial — macho",
+      "asset_dir": "assets/tiburon_inicial_m",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "4f35437a49ef16ce1b5d7597d1434b8722cc0ba158311499b90603996c1a263e",
+        "back.png": "60ada87d01486bf188b4279f917aa172960587ba627e237302901a0191102021",
+        "anim_front.png": "cb3865548e0aa95181c18223cccd9b8da1768abdda61fb55d62a051f92e98eab",
+        "icon.png": "f60f1ea32bffca7229a321bec40cdf681eb6c6a8c0d3c276f82dbb0f63170bf1",
+        "normal.pal": "867de2f44572aa0c7c210c14ed7317aaa4257a32f5d495a77a399f3b81b6c930"
+      },
+      "gba_4bpp_ready": true
+    },
+    "tiburon_inicial_f": {
+      "stage": "initial",
+      "sex": "F",
+      "type": [
+        "Agua"
+      ],
+      "route": null,
+      "group": "cria_tiburon",
+      "name": "Inicial — hembra",
+      "asset_dir": "assets/tiburon_inicial_f",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "a3051e427c7e398caf8350bd62b29779a89748c6a8711ac1421a5ab09e70f87d",
+        "back.png": "802fada1be78841d6915b78e64c0ff68fe4af3cb5f95738c80fc05fc0c4ab6e6",
+        "anim_front.png": "7c53bef84bf9811c91f65c7e1981c312ef21e841ba7c728c5f08dbc205c81cac",
+        "icon.png": "44b6e487b5c9488030243c180d1fc9fdb6068a4eaae202a2dec78a9f94831a55",
+        "normal.pal": "e2de1c662d66b751b450c0e9c6b39d5b8b467bbe76fb68ef7bd832f31f915c4d"
+      },
+      "gba_4bpp_ready": true
+    },
+    "guardian_heroico_m": {
+      "stage": "evolution",
+      "sex": "M",
+      "type": [
+        "Agua",
+        "Acero"
+      ],
+      "route": "Heroe",
+      "group": "cria_tiburon",
+      "name": "Guardián heroico (provisional)",
+      "asset_dir": "assets/guardian_heroico_m",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "027363155ecc8e06c68ae65c09199dfacc196521ecb020aa9eb15e7761fd626c",
+        "back.png": "5fdd57ea5b37a932e085c14494a80bce53918b643f6c43bb9f969be38e95e95f",
+        "anim_front.png": "4d5ca57cef763b0d2b21a5d4eb032b9501d29afa495bd351e299ac9698644241",
+        "icon.png": "433b834fd9a967b9de6e9474c78d06d37a624e6d59b9ca04564504e859d7bfce",
+        "normal.pal": "f104156032f389ac5c274f4364403f4e89dba7cb6f064b1a993136f3d6d54819"
+      },
+      "gba_4bpp_ready": true
+    },
+    "guardian_heroico_f": {
+      "stage": "evolution",
+      "sex": "F",
+      "type": [
+        "Agua",
+        "Acero"
+      ],
+      "route": "Heroe",
+      "group": "cria_tiburon",
+      "name": "Guardiana heroica (provisional)",
+      "asset_dir": "assets/guardian_heroico_f",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "fd10a1414615080034b72898c019ec12c6f8a31ef26e07bd0c788b88142f2690",
+        "back.png": "9c0c96e147201589858a30b87d7d1e74826f7ab72243d70a23bd4edc0f521a84",
+        "anim_front.png": "6a6113942b0977d60e5c986fb7e16eb207c3ff042059819e3f8dc3f820cf93a7",
+        "icon.png": "0b8c3c79767c8c2ee5502422944261bc892cf1c813803dae1dd634e59a00e879",
+        "normal.pal": "754ff0516d9754f6a9a6077c7bcd16a9104f1f867053ea06c5b4120e0faff838"
+      },
+      "gba_4bpp_ready": true
+    },
+    "abisal_villano_m": {
+      "stage": "evolution",
+      "sex": "M",
+      "type": [
+        "Agua",
+        "Siniestro"
+      ],
+      "route": "Villano",
+      "group": "cria_tiburon",
+      "name": "Forma abisal (provisional)",
+      "asset_dir": "assets/abisal_villano_m",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "6451ab8ea8a1eb9180a892e6ca0b5d326c4a917bd782be1197bcc4a41a778d07",
+        "back.png": "27d1e3b29d2201f856f7e00d050da041dfc281563b39d419cc05fcced1683f28",
+        "anim_front.png": "1cf5c5b20ffa9bb66e9317de43d1b7c3fb08933437abde5afb555cb10d04c10b",
+        "icon.png": "bf83606258e7372b18f593f32c5db35651c10a33db568b24bbe5bf56a41a732b",
+        "normal.pal": "f4225c6123fc6a7939b908b34746ef357a1f0c6b570f961729331c49a9de047e"
+      },
+      "gba_4bpp_ready": true
+    },
+    "abisal_villano_f": {
+      "stage": "evolution",
+      "sex": "F",
+      "type": [
+        "Agua",
+        "Siniestro"
+      ],
+      "route": "Villano",
+      "group": "cria_tiburon",
+      "name": "Forma abisal (provisional)",
+      "asset_dir": "assets/abisal_villano_f",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "e2acd15356de34c0b160453475991468becbb064f3405f60b78203badc544cb6",
+        "back.png": "e12a02ff63c5b74b04054fa46e265fb701bda4d884eae277d6fbfab97d61d997",
+        "anim_front.png": "2a4f3af747b56bd1afee61de2a2074f0b98763b886a6ea47c4478cd345788096",
+        "icon.png": "4a2b9392e74d3c1d859a247244788851810bc24de2b2f36003bab762c9176ff5",
+        "normal.pal": "5efea5d79a26fd63359cc3b1db8c22805893c528e179dcf4f6f41fcd85303ebd"
+      },
+      "gba_4bpp_ready": true
+    },
+    "explorador_investigador_m": {
+      "stage": "evolution",
+      "sex": "M",
+      "type": [
+        "Agua",
+        "Tierra"
+      ],
+      "route": "Investigador",
+      "group": "cria_tiburon",
+      "name": "Forma exploradora (provisional)",
+      "asset_dir": "assets/explorador_investigador_m",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "13f562aa36d469bd7337bd3791e77b43ee5baed21bffd1a7beb0e4bbf0b26bbe",
+        "back.png": "408bd10e27f93c1bc0feb745038e2466deede4e90c5aa49850e1a6913e14e951",
+        "anim_front.png": "0246830281702cf7e07e20c69c9ccac78b997bb3438842b079cec85257c5dab7",
+        "icon.png": "a9213e1d0984ad6e17ef55fd58b5bfb44fd96a6c032005c9c916bb616b97d986",
+        "normal.pal": "c126aa3b306591d87299b0621907c14509c29430d0aab82cb6deffbb4736c799"
+      },
+      "gba_4bpp_ready": true
+    },
+    "explorador_investigador_f": {
+      "stage": "evolution",
+      "sex": "F",
+      "type": [
+        "Agua",
+        "Tierra"
+      ],
+      "route": "Investigador",
+      "group": "cria_tiburon",
+      "name": "Forma exploradora (provisional)",
+      "asset_dir": "assets/explorador_investigador_f",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "0f680bccc11b69a4fd1b6920128c30a188cda512ebb9cfe81cd8decf870bef62",
+        "back.png": "d489ede1788a0b7a13f3882e5dd8caafe0305a769efa893a3367f529b86de0f0",
+        "anim_front.png": "8a2cd53775d77a9569bb36005f067100d4ad088d691871cc2bf2812e8056a789",
+        "icon.png": "866641ea8c5b1d089a80d2cf3f8b5e46a99144a14b9a2a58f8d8be71f3d4f266",
+        "normal.pal": "b387540ca6f0b47c8d503fad8167704b8c2d5136df839e93d0ec63f9c79d5f8e"
+      },
+      "gba_4bpp_ready": true
+    },
+    "umbralix": {
+      "stage": "mythic",
+      "sex": null,
+      "type": null,
+      "route": null,
+      "group": "trio_mistico",
+      "name": "Umbrálix",
+      "role": "portales",
+      "lair": "Jardín de los Umbrales",
+      "asset_dir": "assets/umbralix",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "b21f94cef19749322a58bb60688d77899fcd7050c7d858ab066a2f628175b9d3",
+        "back.png": "67556b851850a4230afd516aff6a17921dd67cd880c45000e93df3415a6e5b2d",
+        "anim_front.png": "bbbd0a25d18df4d87e95517e171b46f340cd05bbaff5de388269a61437de115d",
+        "icon.png": "6138294a4e3e242727730a2750c11fe681958a535ea45d03acc236b28b046b58",
+        "normal.pal": "0fe5339df5913f0c6aee7796819705206ce9fead93d2eaa0a138623b27fa86bb"
+      },
+      "gba_4bpp_ready": true
+    },
+    "nevarion": {
+      "stage": "mythic",
+      "sex": null,
+      "type": null,
+      "route": null,
+      "group": "trio_mistico",
+      "name": "Nevarión",
+      "role": "pesadillas",
+      "lair": "Bosque del Sueño",
+      "asset_dir": "assets/nevarion",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "1d5003e13602e66e22d49db9ac38736e7ead21542f049ce0571acf1ad7bf1de3",
+        "back.png": "6e0bb28ada809bb63608577310160d3d4461acdf1d6d56dbeddedff2740dcc75",
+        "anim_front.png": "5fa680295da02db704c61a99c6a82c0a0cfece7ec4bb733c370423024219b693",
+        "icon.png": "4dc3b1a0a0b7c788ddcb92f4e10aa3adc918006545c62ccd2030c094b22a54ae",
+        "normal.pal": "2ece21fd65b7aae32d1b1b5bf103ac91161f844ab54aa0ad9b95a75c664cc60f"
+      },
+      "gba_4bpp_ready": true
+    },
+    "limbora": {
+      "stage": "mythic",
+      "sex": null,
+      "type": null,
+      "route": null,
+      "group": "trio_mistico",
+      "name": "Límbora",
+      "role": "frontera entre mundos",
+      "lair": "el Envés",
+      "asset_dir": "assets/limbora",
+      "front_size": [
+        64,
+        64
+      ],
+      "back_size": [
+        64,
+        64
+      ],
+      "animated_front_size": [
+        64,
+        128
+      ],
+      "icon_size": [
+        32,
+        64
+      ],
+      "indexed_palette_colors": 16,
+      "sha256": {
+        "front.png": "10f138e90bf8eb9f476346b6642e619301526f540106d86b47186f7efe21f029",
+        "back.png": "ea2c8dd3efc5977676a3e0e31ff2722d84f2d958dbde7a9945423055a2bfbfaa",
+        "anim_front.png": "5543c63e59e9d6685832e7e9d56fc9a834311c10a1c1ceb0d106cefb32018cd7",
+        "icon.png": "1f58ddae65c4173fa106cb1918ba21b1ca308ea29a347fa532e8d7410f92269c",
+        "normal.pal": "db019ad5e29e2078b225a13b27c47e53f5110ad8e872a3582d75de4a97cb2f1c"
+      },
+      "gba_4bpp_ready": true
+    }
+  },
+  "items": {
+    "cristal_comun": {
+      "name": "Cristal común",
+      "role": "sellar vínculos con Nevarios",
+      "image_size": [
+        24,
+        24
+      ],
+      "palette_colors": 16
+    },
+    "cristal_claro": {
+      "name": "Cristal claro",
+      "role": "variante de cristal de vínculo, condiciones pendientes",
+      "image_size": [
+        24,
+        24
+      ],
+      "palette_colors": 16
+    },
+    "cristal_oscuro": {
+      "name": "Cristal oscuro",
+      "role": "variante de cristal de vínculo, condiciones pendientes",
+      "image_size": [
+        24,
+        24
+      ],
+      "palette_colors": 16
+    },
+    "veloria": {
+      "name": "Veloria",
+      "role": "herramienta de investigación inventada en el Camino del Investigador a partir de registros antiguos",
+      "image_size": [
+        24,
+        24
+      ],
+      "palette_colors": 16
+    }
+  }
+}

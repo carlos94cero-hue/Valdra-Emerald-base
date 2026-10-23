@@ -1,12 +1,12 @@
 {
   "region": "Valdara",
-  "creatures": "Neverions",
+  "creatures": "Nevarios",
   "speaker": "El viajero",
   "welcome_pages": [
     ["¡Bienvenido a Valdara!"],
     ["Una historia fantástica te espera", "en esta región."],
     ["Una región que aún no ha sido", "explorada por completo."],
-    ["Aquí habitan unas criaturas", "llamadas Neverions."]
+    ["Aquí habitan unas criaturas", "llamadas Nevarios."]
   ],
   "choose": ["Ahora elige a tu protagonista."],
   "boy": "Chico",

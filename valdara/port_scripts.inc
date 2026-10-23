@@ -135,17 +135,17 @@ PuertoBrisa_TextMom:
 PuertoBrisa_TextChoose:
 	.string "Vas a salir del puerto, ¿verdad?\nLleva un compañero contigo.\pTengo dos NIDORAN.\n¿Prefieres a la hembra?\pSÍ: NIDORAN hembra.\nNO: NIDORAN macho.$"
 PuertoBrisa_TextGiven:
-	.string "Cuida de tu nuevo compañero.\nVuestro vínculo empieza hoy.\pEn la hierba de la Ruta 01\nencontrarás otros POKéMON.$"
+	.string "Cuida de tu nuevo compañero.\nVuestro vínculo empieza hoy.\pEn la hierba de la Ruta 01\nencontrarás otros NEVARIOS.$"
 PuertoBrisa_TextElderAfter:
 	.string "La salida está al norte.\nMantén B pulsado para correr.\pElegir un compañero no decide\nqué camino seguirás en Valdara.$"
 PuertoBrisa_TextGate:
-	.string "Antes de salir, habla con el\nanciano que está junto al cartel.\pNo es seguro entrar en la hierba\nsin un POKéMON que te acompañe.$"
+	.string "Antes de salir, habla con el\nanciano que está junto al cartel.\pNo es seguro entrar en la hierba\nsin un NEVARIO que te acompañe.$"
 PuertoBrisa_TextInnkeeper:
 	.string "Bienvenido a la posada.\nTu equipo puede descansar aquí.$"
 PuertoBrisa_TextNurse:
-	.string "Bienvenido al Centro POKéMON.\nVoy a cuidar de tu equipo.$"
+	.string "Bienvenido al Centro de Cuidados.\nVoy a cuidar de tu equipo.$"
 PuertoBrisa_TextHealed:
-	.string "Tus POKéMON están recuperados.\n¡Buen viaje por Valdara!$"
+	.string "Tus NEVARIOS están recuperados.\n¡Buen viaje por Valdara!$"
 PuertoBrisa_TextClerk:
 	.string "Bienvenido. Tenemos provisiones\npara tu primera expedición.$"
 PuertoBrisa_TextThanks:
@@ -161,7 +161,7 @@ PuertoBrisa_TextCargo:
 PuertoBrisa_TextGirl:
 	.string "¡Me encanta pasear por la plaza!\nDesde el faro se ve toda la bahía.$"
 PuertoBrisa_TextMarket:
-	.string "En el mercado hablamos de todo:\nel mar, los viajes y los POKéMON.$"
+	.string "En el mercado hablamos de todo:\nel mar, los viajes y los NEVARIOS.$"
 PuertoBrisa_TextCitizen:
 	.string "Bienvenido a Valdara,\nla tierra de los vínculos.$"
 PuertoBrisa_TextShip:
@@ -177,11 +177,11 @@ PuertoBrisa_TextRouteGirl:
 PuertoBrisa_TextRouteEnd:
 	.string "RUTA 01 - CAMINO DE LA COSTA\nDirección: CIUDAD SALVIA.\pFin del tramo de esta versión.\nPuedes regresar a Puerto Brisa.$"
 PuertoBrisa_TextInnSign:
-	.string "POSADA DE PUERTO BRISA\nDescanso para viajeros y POKéMON.$"
+	.string "POSADA DE PUERTO BRISA\nDescanso para viajeros y NEVARIOS.$"
 PuertoBrisa_TextClinicSign:
-	.string "CENTRO POKéMON\nCuidamos de tus compañeros.$"
+	.string "CENTRO DE CUIDADOS\nCuidamos de tus compañeros.$"
 PuertoBrisa_TextShopSign:
-	.string "TIENDA POKéMON\nProvisiones para tu viaje.$"
+	.string "TIENDA DE VÍNCULOS\nProvisiones para tu viaje.$"
 PuertoBrisa_TextTerminalSign:
 	.string "TERMINAL MARÍTIMA\nLlegadas y embarque.$"
 PuertoBrisa_TextRouteSign:

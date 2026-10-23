@@ -1,0 +1,43 @@
+name: Valdara — sprites de Nevarios (sin ROM)
+on:
+  push:
+    branches: [valdara-nevarios-graficos]
+    paths:
+      - 'valdara/nevarios/sprite_payload.json'
+      - 'valdara/nevarios/rebuild.py'
+      - 'valdara/nevarios/validate_static.py'
+      - 'valdara/nevarios/manifest.json'
+      - '.github/workflows/valdara-nevarios-art.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sprites:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate GBA assets only (no emulator or ROM)
+        run: |
+          python3 valdara/nevarios/rebuild.py
+          python3 valdara/nevarios/validate_static.py
+          test ! -f pokeemerald.gba
+          test ! -f dist/pokeemerald.gba
+      - name: Keep generated sprite files in the project branch
+        run: |
+          git add -f valdara/nevarios/assets
+          if ! git diff --cached --quiet; then
+            git config user.name 'Valdara Art Bot'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Agregar PNGs, paletas e iconos GBA de los Nevarios (sin ROM)'
+            git push origin HEAD:valdara-nevarios-graficos
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Valdara-Nevarios-Sprites-Only
+          path: |
+            valdara/nevarios/assets/
+            valdara/nevarios/manifest.json
+            valdara/nevarios/REGLAS_Y_GUIA.md
+          if-no-files-found: error
+          retention-days: 30

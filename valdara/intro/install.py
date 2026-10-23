@@ -101,7 +101,7 @@ def install(root=ROOT):
               'source_sha256': hashlib.sha256(text.encode()).hexdigest()}
     out = root / 'dist'; out.mkdir(exist_ok=True)
     (out / 'intro_validation.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
-    print('PASS: traveler intro installed; Neverions; native protagonist/name flow; no ROM built')
+    print('PASS: traveler intro installed; Nevarios; native protagonist/name flow; no ROM built')
     return report
 
 if __name__ == '__main__':

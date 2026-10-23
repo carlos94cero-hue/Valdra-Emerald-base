@@ -1,6 +1,6 @@
-# Valdara: el viajero y los Neverions
+# Valdara: el viajero y los Nevarios
 
-Petición de Carlos del 23/10/2026: el profesor deja de presentar la partida. La bienvenida la realiza el viajero que entrega el inicial en Puerto Brisa. Las criaturas se llaman **Neverions**. Después de la bienvenida se pasa a la elección del protagonista.
+Petición de Carlos del 23/10/2026: el profesor deja de presentar la partida. La bienvenida la realiza el viajero que entrega el inicial en Puerto Brisa. Las criaturas se llaman **Nevarios**. Después de la bienvenida se pasa a la elección del protagonista.
 
 ## Secuencia
 
@@ -8,7 +8,7 @@ Petición de Carlos del 23/10/2026: el profesor deja de presentar la partida. La
 2. «¡Bienvenido a Valdara!»
 3. «Una historia fantástica te espera en esta región.»
 4. «Una región que aún no ha sido explorada por completo.»
-5. «Aquí habitan unas criaturas llamadas Neverions.»
+5. «Aquí habitan unas criaturas llamadas Nevarios.»
 6. «Ahora elige a tu protagonista.» Opciones Chico / Chica con los retratos ya preparados del proyecto.
 7. Nombre y confirmación. Al cancelar, se conserva el regreso nativo a la selección.
 8. «¡Tu historia en Valdara comienza ahora!» y comienzo en Puerto Brisa.
@@ -28,7 +28,7 @@ python3 valdara/intro/test_intro.py
 
 El instalador aplica cambios comprobados a `src/main_menu.c`, genera `src/valdara_intro_text.h` y actualiza el gráfico del viajero en el mapa generado. El texto editable está en `dialogue.json`. El workflow de Puerto Brisa incluye esta etapa para la futura compilación; su filtro de ramas NO activa compilaciones al editar `valdara-inicio-logo-aprobado`.
 
-No se compila ni enlaza ninguna ROM en esta entrega. Se mantienen intactos el logo aprobado, su pantalla inicial, las tablas de animación, los combates y los datos de guardado. Los nombres técnicos históricos Birch, Lotad y Pokémon que quedan en código no son texto mostrado por la nueva secuencia. La nueva introducción usa Neverions; la traducción de todas las interfaces heredadas no forma parte de esta modificación.
+No se compila ni enlaza ninguna ROM en esta entrega. Se mantienen intactos el logo aprobado, su pantalla inicial, las tablas de animación, los combates y los datos de guardado. Los nombres técnicos históricos Birch, Lotad y Pokémon que quedan en código no son texto mostrado por la nueva secuencia. La nueva introducción usa Nevarios; la traducción de todas las interfaces heredadas no forma parte de esta modificación.
 
 ## Comprobaciones
 
