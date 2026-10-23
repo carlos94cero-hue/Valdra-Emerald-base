@@ -8,22 +8,67 @@ permissions:
 defaults:
   run:
     shell: bash
+concurrency:
+  group: puerto-brisa-emerald
+  cancel-in-progress: true
 jobs:
-  resources:
+  build:
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Export source for map and animation validation
+      - name: Native compiler and emulator
         run: |
           mkdir -p dist
-          git archive --format=zip HEAD -o dist/Emerald-source.zip
+          if [ -f /etc/apt/apt-mirrors.txt ]; then echo 'https://archive.ubuntu.com/ubuntu' | sudo tee /etc/apt/apt-mirrors.txt >/dev/null; fi
+          if [ -f /etc/apt/apt-security-mirrors.txt ]; then echo 'https://security.ubuntu.com/ubuntu' | sudo tee /etc/apt/apt-security-mirrors.txt >/dev/null; fi
+          sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu/|https://archive.ubuntu.com/ubuntu/|g; s|https://azure.archive.ubuntu.com/ubuntu/|https://archive.ubuntu.com/ubuntu/|g' /etc/apt/sources.list.d/ubuntu.sources
+          sudo timeout 180 apt-get update -o Acquire::Retries=1 -o Acquire::https::Timeout=20 > dist/apt.log 2>&1
+          sudo DEBIAN_FRONTEND=noninteractive timeout 300 apt-get install -y --no-install-recommends build-essential git binutils-arm-none-eabi libpng-dev python3-pil python3-numpy libmgba-dev >> dist/apt.log 2>&1
+      - name: Install new native maps and per-action sprites
+        run: |
+          python3 valdara/install_port.py
+          python3 valdara/install_motion.py
+          git diff --exit-code -- src/data/object_events/object_event_anims.h src/field_player_avatar.c src/event_object_movement.c
+      - name: Build original agbcc compiler
+        run: |
+          git clone --depth 1 https://github.com/pret/agbcc.git /tmp/agbcc
+          cd /tmp/agbcc
+          ./build.sh > "$GITHUB_WORKSPACE/dist/agbcc.log" 2>&1
+          ./install.sh "$GITHUB_WORKSPACE" >> "$GITHUB_WORKSPACE/dist/agbcc.log" 2>&1
+      - name: Compile real Pokemon Emerald
+        run: |
+          make -j4 > dist/build.log 2>&1 || { tail -100 dist/build.log; exit 1; }
+          python3 valdara/verify_compiled_art.py
+          cp pokeemerald.gba dist/Valdara_Esmeralda_Puerto_Brisa.gba
+          sha256sum dist/Valdara_Esmeralda_Puerto_Brisa.gba > dist/SHA256SUMS.txt
+      - name: Input-driven mGBA tests for both protagonists
+        run: |
+          python3 valdara/build_port_symbols.py
+          cc -D_GNU_SOURCE -O2 -Idist valdara/test_port.c -lmgba -o /tmp/valdara-port-test
+          timeout 150 /tmp/valdara-port-test pokeemerald.gba dist/capturas 2>&1 | tee dist/emulator-tests.txt
+      - name: Package editable maps and screenshots
+        if: always()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          from zipfile import ZipFile,ZIP_DEFLATED
+          for p in Path('dist/capturas').glob('*.ppm'):
+              im=Image.open(p);im.save(p.with_suffix('.png'));im.resize((960,640),Image.Resampling.NEAREST).save(p.with_name(p.stem+'-4x.png'));p.unlink()
+          with ZipFile('dist/Fuentes_Puerto_Brisa.zip','w',ZIP_DEFLATED) as z:
+              for folder in ['valdara','data/maps','data/layouts','src/data','graphics/object_events','graphics/trainers']:
+                  for p in Path(folder).rglob('*'):
+                      if p.is_file() and p.suffix not in ['.o','.4bpp','.lz','.gbapal','.pyc']:z.write(p)
+              for p in ['src/new_game.c','src/overworld.c','data/event_scripts.s']:z.write(p)
+          PY
           git rev-parse HEAD > dist/commit.txt
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: Emerald-port-workspace
+          name: Valdara-Esmeralda-Puerto-Brisa
           path: dist/
           if-no-files-found: error
           retention-days: 14
