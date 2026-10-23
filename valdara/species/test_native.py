@@ -37,6 +37,9 @@ def test():
     front=(ROOT/'src/data/pokemon_graphics/front_pic_coordinates.h').read_text()
     back=(ROOT/'src/data/pokemon_graphics/back_pic_coordinates.h').read_text()
     ability_specs=0;stats_count=0; art_count=0; exact_type=0; type_pending=0
+    graphics=ROOT/'graphics/valdara_nevarios'
+    if not (graphics/'tiburon_inicial_m/front.png').is_file():
+        graphics=ROOT/'valdara/nevarios/assets'
     for e in entries:
         i=e['number'];slot=idmap[i]; n=e['gba_name'].upper()
         assert 1<=i<=250 and len(n)<=10,(i,n)
@@ -60,7 +63,7 @@ def test():
         ability_specs+=len(e['ability_spec'])
         if e['art_slug']:
             art_count+=1
-            path=ROOT/'graphics/pokemon'/slot.lower();source_path=ROOT/'graphics/valdara_nevarios'/e['art_slug']
+            path=ROOT/'graphics/pokemon'/slot.lower();source_path=graphics/e['art_slug']
             for f, size in [('front.png',(64,64)),('back.png',(64,64)),('anim_front.png',(64,128)),('icon.png',(32,64))]:
                 img=Image.open(path/f);assert img.mode=='P' and img.size==size
                 assert max(img.getdata())<=15,(i,f)

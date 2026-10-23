@@ -256,7 +256,10 @@ def install():
     info['approved_evolutions_deferred']=sum(r['status']=='APROBADO' for r in data['evolutions'])-len(safe)
     add_alias_header(ids,entry)
     # Install 11 finalized sprite resource sheets in active graphics/pokemon folders.
-    graphics=ROOT/'graphics/valdara_nevarios'; icon_c=ROOT/'src/pokemon_icon.c'
+    graphics=ROOT/'graphics/valdara_nevarios'
+    if not (graphics/'tiburon_inicial_m/front.png').is_file():
+        graphics=ROOT/'valdara/nevarios/assets'
+    icon_c=ROOT/'src/pokemon_icon.c'
     icon_text=icon_c.read_text();
     front_c=(ROOT/'src/data/pokemon_graphics/front_pic_coordinates.h')
     back_c=(ROOT/'src/data/pokemon_graphics/back_pic_coordinates.h')
