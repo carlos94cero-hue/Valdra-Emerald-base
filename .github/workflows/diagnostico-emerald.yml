@@ -1,0 +1,19 @@
+name: Diagnóstico de integración Esmeralda
+on:
+  push:
+    branches: [valdara-diagnostico-build]
+permissions:
+  actions: read
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Leer errores del registro previo
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/carlos94cero-hue/Valdra-Emerald-base/actions/jobs/120187315446/logs > /tmp/previous-build.log
+          grep -n -E 'error:|Error|ERROR|fatal|undefined|not found|Invalid|invalid|failed' /tmp/previous-build.log | tail -35 || true
+          tail -45 /tmp/previous-build.log
