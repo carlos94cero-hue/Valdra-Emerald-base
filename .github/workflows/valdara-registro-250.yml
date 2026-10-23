@@ -1,0 +1,61 @@
+name: Valdara - Registrar 250 Nevarios (SIN ROM)
+on:
+  push:
+    branches:
+      - valdara-registro-250
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: valdara-species-register
+  cancel-in-progress: true
+jobs:
+  native-species:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image validation library
+        run: python -m pip install --disable-pip-version-check Pillow==11.3.0
+      - name: Produce native Emerald tables and test; no game ROM
+        run: |
+          set -euo pipefail
+          python3 valdara/species/unpack.py
+          python3 valdara/species/install_native.py
+          python3 valdara/species/test_native.py
+          test ! -e pokeemerald.gba
+          test ! -e valdara-alpha-mode0.gba
+      - name: Commit the verified source tables and 11 sprite replacements
+        run: |
+          set -euo pipefail
+          git config user.name 'Valdara CI'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            include/constants/species.h include/constants/valdara_species.h \
+            src/data/text/species_names.h src/data/pokemon/species_info.h \
+            src/data/pokemon/evolution.h src/pokemon_icon.c \
+            src/data/pokemon_graphics/front_pic_coordinates.h \
+            src/data/pokemon_graphics/back_pic_coordinates.h \
+            graphics/pokemon valdara/port_scripts.inc valdara/install_port.py \
+            valdara/species/catalog_250.json valdara/species/native_validation.json \
+            valdara/species/test_results.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Instalar tablas nativas y 11 sprites de 250 Nevarios [skip ci]'
+            git push origin HEAD:valdara-registro-250
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: Valdara-250-tablas-nativas-SIN-ROM
+          path: |
+            valdara/species/catalog_names.csv
+            valdara/species/native_validation.json
+            valdara/species/test_results.json
+          if-no-files-found: warn
+          retention-days: 14

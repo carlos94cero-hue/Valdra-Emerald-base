@@ -1,0 +1,253 @@
+<PARSED TEXT FOR SHEET: 1 / 1 TABS
+TAB NAME: Valdara-Stage-catalog_names.csv>
+index,Nº,Nombre Valdara (completo),Nombre GBA,Nombre anterior,Tipo diseño,BST exacto aprobado,BST objetivo sin distribución,Arte original,Estado
+0,1,Escualín,Escualín,Nidoran♂,"Azul; variantes por héroe, villano y neutral",290.0,,True,Alias provisional
+1,2,Escualín,Escualín,Nidoran♀,"Rosa; variantes por héroe, villano y neutral",300.0,,True,Alias provisional
+2,3,Escualito,Escualito,Nidorino,"Azul; variantes por héroe, villano y neutral",,,False,Alias provisional
+3,4,Escualita,Escualita,Nidorina,"Rosa; variantes por héroe, villano y neutral",,,False,Alias provisional
+4,5,Escuarón,Escuarón,Nidoking,"Azul; variantes por héroe, villano y neutral",,,False,Alias provisional
+5,6,Escuarina,Escuarina,Nidoqueen,"Rosa; variantes por héroe, villano y neutral",,,False,Alias provisional
+6,7,Guardal,Guardal,Nidoaurion,"Azul; variantes por héroe, villano y neutral",690.0,,True,Alias provisional
+7,8,Abiskar,Abiskar,Nidonoctis,"Azul; variantes por héroe, villano y neutral",690.0,,True,Alias provisional
+8,9,Terraleta,Terraleta,Nidoterros,"Azul; variantes por héroe, villano y neutral",690.0,,True,Alias provisional
+9,10,Guardal,Guardal,Nidoauria,"Rosa; variantes por héroe, villano y neutral",690.0,,True,Alias provisional
+10,11,Abiskar,Abiskar,Nidonoctia,"Rosa; variantes por héroe, villano y neutral",690.0,,True,Alias provisional
+11,12,Terraleta,Terraleta,Nidoterra,"Rosa; variantes por héroe, villano y neutral",690.0,,True,Alias provisional
+12,13,Alivín,Alivín,Alivín,Volador/Hada; Volador/Siniestro; Volador/Roca,,,False,Confirmado
+13,14,Celestín,Celestín,Celestín,Volador/Hada; Volador/Siniestro; Volador/Roca,,,False,Confirmado
+14,15,Aeraluz,Aeraluz,Aeraluz,Volador/Hada; Volador/Siniestro; Volador/Roca,,,False,Confirmado
+15,16,Nigralis,Nigralis,Nigralis,Volador/Hada; Volador/Siniestro; Volador/Roca,,,False,Confirmado
+16,17,Terravelo,Terravelo,Terravelo,Volador/Hada; Volador/Siniestro; Volador/Roca,,,False,Confirmado
+17,18,Musgín,Musgín,Musgín,Bicho/Planta → Bicho/Fantasma (lámina),,,False,Confirmado visual
+18,19,Muscalio,Muscalio,Muscalio,Bicho/Planta → Bicho/Fantasma (lámina),,,False,Confirmado visual
+19,20,Corazal,Corazal,Corazal,Bicho/Planta → Bicho/Fantasma (lámina),,,False,Confirmado visual
+20,21,Brisín,Brisín,Brisín,Agua,,,False,Aprobado
+21,22,Brisauro,Brisauro,Brisauro,Agua,540.0,,False,Aprobado
+22,23,Ascual,Ascual,Ascual,Fuego; Fuego/Hada propuesto,,,False,Aprobado
+23,24,Fulgaz,Fulgaz,Fulgaz,Fuego; Fuego/Hada propuesto,540.0,,False,Aprobado
+24,25,Guijín,Guijín,Guijín,Tierra/Acero,,,False,Aprobado
+25,26,Taladón,Taladón,Taladón,Tierra/Acero,540.0,,False,Aprobado
+26,27,Noctila,Noctila,Noctila,Bicho/Psíquico,,,False,Aprobado
+27,28,Velunara,Velunara,Velunara,Bicho/Psíquico,540.0,,False,Aprobado
+28,29,Lúmori,Lúmori,Lúmori,Planta/Hada,,,False,Aprobado
+29,30,Cervaluz,Cervaluz,Cervaluz,Planta/Hada,,,False,Aprobado
+30,31,Silvarion,Silvarion,Silvarion,Planta/Hada,610.0,,False,Aprobado
+31,32,Neril,Neril,Neril,Agua/Dragón,,,False,Aprobado
+32,33,Maredris,Maredris,Maredris,Agua/Dragón,,,False,Aprobado
+33,34,Thaloryn,Thaloryn,Thaloryn,Agua/Dragón,600.0,,False,Aprobado
+34,35,Petral,Petral,Petral,Roca/Fantasma,,,False,Aprobado
+35,36,Runagor,Runagor,Runagor,Roca/Fantasma,,,False,Aprobado
+36,37,Monolyth,Monolyth,Monolyth,Roca/Fantasma,600.0,,False,Aprobado
+37,38,Umbril,Umbril,Umbril,Siniestro/Fantasma,,,False,Aprobado
+38,39,Nocteral,Nocteral,Nocteral,Siniestro/Fantasma,,,False,Aprobado
+39,40,Umbraxis,Umbraxis,Umbraxis,Siniestro/Fantasma,600.0,,False,Aprobado
+40,41,Astrel,Astrel,Astrel,Volador/Psíquico,,,False,Aprobado
+41,42,Grifaluz,Grifaluz,Grifaluz,Volador/Psíquico,,,False,Aprobado
+42,43,Asterion,Asterion,Asterion,Volador/Psíquico,600.0,,False,Aprobado
+43,44,Brumín,Brumín,Brumín,Agua/Fantasma,,,False,Aprobado
+44,45,Nébular,Nébular,Nébular,Agua/Fantasma,,,False,Aprobado
+45,46,Pantheia,Pantheia,Pantheia,Agua/Fantasma,600.0,,False,Aprobado
+46,47,Drakil,Drakil,Drakil,Dragón/Roca,,,False,Aprobado
+47,48,Drakhor,Drakhor,Drakhor,Dragón/Roca,,,False,Aprobado
+48,49,Drakaryon,Drakaryon,Drakaryon,Dragón/Roca,620.0,,False,Aprobado
+49,50,Ferrín,Ferrín,Ferrín,Acero/Fantasma,,,False,Aprobado
+50,51,Ferrumbral,Ferrumbral,Ferrumbral,Acero/Fantasma,,,False,Aprobado
+51,52,Ferratán,Ferratán,Ferratán,Acero/Fantasma,600.0,,False,Aprobado
+52,53,Cristel,Cristel,Cristel,Roca/Psíquico,,,False,Aprobado
+53,54,Prismora,Prismora,Prismora,Roca/Psíquico,580.0,,False,Aprobado
+54,55,Sombril,Sombril,Sombril,Fantasma/Siniestro,,,False,Aprobado
+55,56,Velumbria,Velumbria,Velumbria,Fantasma/Siniestro,,,False,Aprobado
+56,57,Nocthar,Nocthar,Nocthar,Fantasma/Siniestro,600.0,,False,Aprobado
+57,58,Caprín,Caprín,Caprín,Roca/Lucha,,,False,Aprobado
+58,59,Montarok,Montarok,Montarok,Roca/Lucha,580.0,,False,Aprobado
+59,60,Aurélix,Aurélix,Aurélix,Hielo/Psíquico,,,False,Aprobado
+60,61,Nivalis,Nivalis,Nivalis,Hielo/Psíquico,,,False,Aprobado
+61,62,Céniora,Céniora,Céniora,Hielo/Psíquico,600.0,,False,Aprobado
+62,63,Lianín,Lianín,Lianín,Bicho/Dragón,,,False,Confirmado
+63,64,Serpelia,Serpelia,Serpelia,Bicho/Dragón,,,False,Confirmado
+64,65,Verdakra,Verdakra,Verdakra,Bicho/Dragón,620.0,,False,Confirmado
+65,66,Lúmina,Lúmina,Lúmina,Bicho/Hada,,,False,Aprobado
+66,67,Farolume,Farolume,Farolume,Bicho/Hada,560.0,,False,Aprobado
+67,68,Ribul,Ribul,Ribul,Agua/Siniestro,,,False,Aprobado
+68,69,Croakmar,Croakmar,Croakmar,Agua/Siniestro,,,False,Aprobado
+69,70,Pantagor,Pantagor,Pantagor,Agua/Siniestro,600.0,,False,Aprobado
+70,71,Florín,Florín,Florín,Planta/Veneno,,,False,Aprobado
+71,72,Orquidea,Orquidea,Orquidea,Planta/Veneno,580.0,,False,Aprobado
+72,73,Neblín,Neblín,Neblín,Fantasma/Hada,,,False,Aprobado
+73,74,Espectruma,Espectruma,Espectruma,Fantasma/Hada,580.0,,False,Aprobado
+74,75,Caimín,Caimín,Caimín,Agua/Dragón,,,False,Aprobado
+75,76,Dracaim,Dracaim,Dracaim,Agua/Dragón,610.0,,False,Aprobado
+76,77,Raicel,Raicel,Raicel,Planta/Roca,,,False,Aprobado
+77,78,Entarbol,Entarbol,Entarbol,Planta/Roca,,,False,Aprobado
+78,79,Arbolith,Arbolith,Arbolith,Planta/Roca,610.0,,False,Aprobado
+79,80,Aurial,Aurial,Aurial,Solerya Dragón/Hada,350.0,,False,Confirmado
+80,81,Celestrin,Celestrin,Celestrin,Solerya Dragón/Hada,500.0,,False,Confirmado
+81,82,Solerya,Solerya,Solerya,Solerya Dragón/Hada,650.0,,False,Confirmado
+82,83,Somnilo,Somnilo,Somnilo,Psíquico/Fantasma,,,False,Aprobado
+83,84,Oniriel,Oniriel,Oniriel,Psíquico/Fantasma,,,False,Aprobado
+84,85,Morfeon,Morfeon,Morfeon,Psíquico/Fantasma,600.0,,False,Aprobado
+85,86,Cronel,Cronel,Cronel,Acero/Psíquico,,,False,Aprobado
+86,87,Temporyn,Temporyn,Temporyn,Acero/Psíquico,,,False,Aprobado
+87,88,Aethernox,Aethernox,Aethernox,Acero/Psíquico,630.0,,False,Aprobado
+88,89,Velkín,Velkín,Velkín,Fantasma/Dragón,,,False,Aprobado
+89,90,Arcanvel,Arcanvel,Arcanvel,Fantasma/Dragón,,,False,Aprobado
+90,91,Velkarion,Velkarion,Velkarion,Fantasma/Dragón,620.0,,False,Aprobado
+91,92,Fenirín,Fenirín,Fenirín,Hielo/Siniestro,,,False,Aprobado
+92,93,Fenrakar,Fenrakar,Fenrakar,Hielo/Siniestro,,,False,Aprobado
+93,94,Fenrath,Fenrath,Fenrath,Hielo/Siniestro,600.0,,False,Aprobado
+94,95,Serpín,Serpín,Serpín,Veneno/Dragón,,,False,Aprobado
+95,96,Basilor,Basilor,Basilor,Veneno/Dragón,,,False,Aprobado
+96,97,Basiliskar,Basiliskar,Basiliskar,Veneno/Dragón,620.0,,False,Aprobado
+97,98,Quimerín,Quimerín,Quimerín,Fuego/Siniestro,,,False,Aprobado
+98,99,Quimerox,Quimerox,Quimerox,Fuego/Siniestro,,,False,Aprobado
+99,100,Quimerath,Quimerath,Quimerath,Fuego/Siniestro,620.0,,False,Aprobado
+100,101,Silfín,Silfín,Silfín,Hada/Volador,,,False,Aprobado
+101,102,Silfaria,Silfaria,Silfaria,Hada/Volador,580.0,,False,Aprobado
+102,103,Grifín,Grifín,Grifín,Roca/Volador,,,False,Aprobado
+103,104,Grifalor,Grifalor,Grifalor,Roca/Volador,,,False,Aprobado
+104,105,Grifaryon,Grifaryon,Grifaryon,Roca/Volador,600.0,,False,Aprobado
+105,106,Coralyn,Coralyn,Coralyn,Agua/Roca; Agua/Fantasma; Agua/Dragón,,,False,Aprobado visual
+106,107,Coralyth,Coralyth,Coralyth,Agua/Roca; Agua/Fantasma; Agua/Dragón,580.0,,False,Aprobado visual
+107,108,Abyssul,Abyssul,Abyssul,Agua/Roca; Agua/Fantasma; Agua/Dragón,,,False,Aprobado visual
+108,109,Abyssur,Abyssur,Abyssur,Agua/Roca; Agua/Fantasma; Agua/Dragón,580.0,,False,Aprobado visual
+109,110,Thalun,Thalun,Thalun,Agua/Roca; Agua/Fantasma; Agua/Dragón,600.0,,False,Aprobado visual
+110,111,Petramín,Petramín,Petramín,Roca/Acero; Psíquico/Hada,,,False,Aprobado visual
+111,112,Petrarok,Petrarok,Petrarok,Roca/Acero; Psíquico/Hada,,,False,Aprobado visual
+112,113,Monumenthor,Monumentor,Monumenthor,Roca/Acero; Psíquico/Hada,620.0,,False,Alias provisional
+113,114,Espejina,Espejina,Espejina,Roca/Acero; Psíquico/Hada,,,False,Aprobado visual
+114,115,Lúminar,Lúminar,Lúminar,Roca/Acero; Psíquico/Hada,580.0,,False,Aprobado visual
+115,116,Vexín,Vexín,Vexín,Fantasma/Siniestro; Planta/Dragón,,,False,Aprobado visual
+116,117,Vexar,Vexar,Vexar,Fantasma/Siniestro; Planta/Dragón,,,False,Aprobado visual
+117,118,Vexaryon,Vexaryon,Vexaryon,Fantasma/Siniestro; Planta/Dragón,620.0,,False,Aprobado visual
+118,119,Florán,Florán,Florán,Fantasma/Siniestro; Planta/Dragón,,,False,Aprobado visual
+119,120,Florath,Florath,Florath,Fantasma/Siniestro; Planta/Dragón,580.0,,False,Aprobado visual
+120,121,Mirín,Mirín,Mirín,Normal/Hada; Eléctrico/Volador,,,False,Aprobado visual
+121,122,Mirath,Mirath,Mirath,Normal/Hada; Eléctrico/Volador,560.0,,False,Aprobado visual
+122,123,Nimbos,Nimbos,Nimbos,Normal/Hada; Eléctrico/Volador,,,False,Aprobado visual
+123,124,Nimbaris,Nimbaris,Nimbaris,Normal/Hada; Eléctrico/Volador,580.0,,False,Aprobado visual
+124,125,Orbex,Orbex,Orbex,Acero/Psíquico; Siniestro/Volador; Hielo/Hada; Dragón/Acero,620.0,,False,Aprobado visual
+125,126,Umbrafín,Umbrafín,Umbrafín,Acero/Psíquico; Siniestro/Volador; Hielo/Hada; Dragón/Acero,,,False,Aprobado visual
+126,127,Umbrafen,Umbrafen,Umbrafen,Acero/Psíquico; Siniestro/Volador; Hielo/Hada; Dragón/Acero,580.0,,False,Aprobado visual
+127,128,Nebulith,Nebulith,Nebulith,Acero/Psíquico; Siniestro/Volador; Hielo/Hada; Dragón/Acero,,,False,Aprobado visual
+128,129,Nebulyn,Nebulyn,Nebulyn,Acero/Psíquico; Siniestro/Volador; Hielo/Hada; Dragón/Acero,580.0,,False,Aprobado visual
+129,130,Chronix,Chronix,Chronix,Acero/Psíquico; Siniestro/Volador; Hielo/Hada; Dragón/Acero,630.0,,False,Aprobado visual
+130,131,Rayín,Rayín,Zigzagoon,Normal/Fantasma; Volador/Hielo; Volador/Siniestro,,,False,Alias provisional
+131,132,Rayluz,Rayluz,Linoone,Normal/Fantasma; Volador/Hielo; Volador/Siniestro,,,False,Alias provisional
+132,133,Celín,Celín,Taillow,Normal/Fantasma; Volador/Hielo; Volador/Siniestro,,,False,Alias provisional
+133,134,Celerío,Celerío,Swellow,Normal/Fantasma; Volador/Hielo; Volador/Siniestro,,,False,Alias provisional
+134,135,Velagavi,Velagavi,Wingull,Normal/Fantasma; Volador/Hielo; Volador/Siniestro,,,False,Alias provisional
+135,136,Maringavi,Maringavi,Pelipper,Normal/Fantasma; Volador/Hielo; Volador/Siniestro,,,False,Alias provisional
+136,137,Micelín,Micelín,Shroomish,Planta/Fantasma; Roca/Psíquico; Fantasma/Roca,,,False,Alias provisional
+137,138,Micelar,Micelar,Breloom,Planta/Fantasma; Roca/Psíquico; Fantasma/Roca,,,False,Alias provisional
+138,139,Pedrín,Pedrín,Geodude,Planta/Fantasma; Roca/Psíquico; Fantasma/Roca,,,False,Alias provisional
+139,140,Pedracor,Pedracor,Graveler,Planta/Fantasma; Roca/Psíquico; Fantasma/Roca,,,False,Alias provisional
+140,141,Monagor,Monagor,Golem,Planta/Fantasma; Roca/Psíquico; Fantasma/Roca,,,False,Alias provisional
+141,142,Sombrisco,Sombrisco,Duskull,Planta/Fantasma; Roca/Psíquico; Fantasma/Roca,,,False,Alias provisional
+142,143,Umbrosca,Umbrosca,Dusclops,Planta/Fantasma; Roca/Psíquico; Fantasma/Roca,,,False,Alias provisional
+143,144,Umbrogor,Umbrogor,Dusknoir,Planta/Fantasma; Roca/Psíquico; Fantasma/Roca,,,False,Alias provisional
+144,145,Lodalín,Lodalín,Wooper,Agua/Hada; Planta/Hielo; Volador/Siniestro; Siniestro/Psíquico,,,False,Alias provisional
+145,146,Lodamar,Lodamar,Quagsire,Agua/Hada; Planta/Hielo; Volador/Siniestro; Siniestro/Psíquico,,,False,Alias provisional
+146,147,Nenufín,Nenufín,Lotad,Agua/Hada; Planta/Hielo; Volador/Siniestro; Siniestro/Psíquico,,,False,Alias provisional
+147,148,Nenurío,Nenurío,Lombre,Agua/Hada; Planta/Hielo; Volador/Siniestro; Siniestro/Psíquico,,,False,Alias provisional
+148,149,Nenurón,Nenurón,Ludicolo,Agua/Hada; Planta/Hielo; Volador/Siniestro; Siniestro/Psíquico,,,False,Alias provisional
+149,150,Nubelín,Nubelín,Swablu,Agua/Hada; Planta/Hielo; Volador/Siniestro; Siniestro/Psíquico,,,False,Alias provisional
+150,151,Nubeala,Nubeala,Altaria,Agua/Hada; Planta/Hielo; Volador/Siniestro; Siniestro/Psíquico,,,False,Alias provisional
+151,152,Auralobo,Auralobo,Absol,Agua/Hada; Planta/Hielo; Volador/Siniestro; Siniestro/Psíquico,,,False,Alias provisional
+152,153,Eldarion,Eldarion,Eldarion,Planta/Hada; Psíquico/Volador; Fantasma/Hada; Fuego/Tierra; Agua/Dragón; Dragón/Volador,,800.0,False,Aprobado
+153,154,Memnorys,Memnorys,Memnorys,Planta/Hada; Psíquico/Volador; Fantasma/Hada; Fuego/Tierra; Agua/Dragón; Dragón/Volador,,800.0,False,Aprobado
+154,155,Nevaryx,Nevaryx,Nevaryx,Planta/Hada; Psíquico/Volador; Fantasma/Hada; Fuego/Tierra; Agua/Dragón; Dragón/Volador,,800.0,False,Aprobado
+155,156,Ignarok,Ignarok,Ignarok,Planta/Hada; Psíquico/Volador; Fantasma/Hada; Fuego/Tierra; Agua/Dragón; Dragón/Volador,,800.0,False,Aprobado
+156,157,Thalassyr,Thalassyr,Thalassyr,Planta/Hada; Psíquico/Volador; Fantasma/Hada; Fuego/Tierra; Agua/Dragón; Dragón/Volador,,800.0,False,Aprobado
+157,158,Aetherion,Aetherion,Aetherion,Planta/Hada; Psíquico/Volador; Fantasma/Hada; Fuego/Tierra; Agua/Dragón; Dragón/Volador,,800.0,False,Aprobado
+158,159,Nevarión,Nevarión,Darkrai,Siniestro/Hada; Psíquico/Fantasma; Dragón/Fantasma,,800.0,True,Alias provisional
+159,160,Umbrálix,Umbrálix,Hoopa,Siniestro/Hada; Psíquico/Fantasma; Dragón/Fantasma,,800.0,True,Alias provisional
+160,161,Límbora,Límbora,Giratina,Siniestro/Hada; Psíquico/Fantasma; Dragón/Fantasma,,800.0,True,Alias provisional
+161,162,Coralín,Coralín,Coralín,Agua/Hada,,,False,Aprobado en conversación
+162,163,Cantacoral,Cantacoral,Cantacoral,Agua/Hada,,,False,Aprobado en conversación
+163,164,Arrecantor,Arrecantor,Arrecantor,Agua/Hada,,,False,Aprobado en conversación
+164,165,Raizín,Raizín,Raizín,Planta/Fantasma,,,False,Aprobado en conversación
+165,166,Ciervalma,Ciervalma,Ciervalma,Planta/Fantasma,,,False,Aprobado en conversación
+166,167,Raicestral,Raicestral,Raicestral,Planta/Fantasma,,,False,Aprobado en conversación
+167,168,Ritualín,Ritualín,Ritualín,Siniestro/Psíquico,,,False,Aprobado en conversación
+168,169,Zorritual,Zorritual,Zorritual,Siniestro/Psíquico,,,False,Aprobado en conversación
+169,170,Umbrazorro,Umbrazorro,Umbrazorro,Siniestro/Psíquico,,,False,Aprobado en conversación
+170,171,Escarchín,Escarchín,Escarchín,Hielo/Dragón,,,False,Aprobado en conversación
+171,172,Escardraco,Escardraco,Escardraco,Hielo/Dragón,,,False,Aprobado en conversación
+172,173,Ventisdraco,Ventidraco,Ventisdraco,Hielo/Dragón,,,False,Alias provisional
+173,174,Astrogín,Astrogín,Astrogín,Psíquico/Eléctrico,,,False,Aprobado en conversación
+174,175,Felinova,Felinova,Felinova,Psíquico/Eléctrico,,,False,Aprobado en conversación
+175,176,Cosmifél,Cosmifél,Cosmifél,Psíquico/Eléctrico,,,False,Aprobado en conversación
+176,177,Salcrab,Salcrab,Salcrab,Agua/Roca,,,False,Aprobado en conversación
+177,178,Salmar,Salmar,Salmar,Agua/Roca,,,False,Aprobado en conversación
+178,179,Crustálido,Crustálido,Crustálido,Agua/Roca,,,False,Aprobado en conversación
+179,180,Marelín,Marelín,Marelín,Agua/Veneno,,,False,Aprobado en conversación
+180,181,Coralux,Coralux,Coralux,Agua/Veneno,,,False,Aprobado en conversación
+181,182,Abisalux,Abisalux,Abisalux,Agua/Veneno,,,False,Aprobado en conversación
+182,183,Manglín,Manglín,Manglín,Agua/Planta,,,False,Aprobado en conversación
+183,184,Algalín,Algalín,Algalín,Agua/Planta,,,False,Aprobado en conversación
+184,185,Maestral,Maestral,Maestral,Agua/Planta,,,False,Aprobado en conversación
+185,186,Tempestir,Tempestir,Tempestir,Volador/Eléctrico,,,False,Aprobado en conversación
+186,187,Aerisca,Aerisca,Aerisca,Volador/Eléctrico,,,False,Aprobado en conversación
+187,188,Tormáguila,Tormáguila,Tormáguila,Volador/Eléctrico,,,False,Aprobado en conversación
+188,189,Lúmin,Lúmin,Lúmin,Agua/Siniestro,,,False,Aprobado en conversación
+189,190,Sombraluz,Sombraluz,Sombraluz,Agua/Siniestro,,,False,Aprobado en conversación
+190,191,Abismor,Abismor,Abismor,Agua/Siniestro,,,False,Aprobado en conversación
+191,192,Arborín,Arborín,Arborín,Planta/Roca,,,False,Aprobado en conversación
+192,193,Terralín,Terralín,Terralín,Planta/Roca,,,False,Aprobado en conversación
+193,194,Bosqueón,Bosqueón,Bosqueón,Planta/Roca,,,False,Aprobado en conversación
+194,195,Nimbín,Nimbín,Nimbín,Normal/Hada,,,False,Aprobado en conversación
+195,196,Cirín,Cirín,Cirín,Normal/Hada,,,False,Aprobado en conversación
+196,197,Aurélia,Aurélia,Aurélia,Normal/Hada,,,False,Aprobado en conversación
+197,198,Umbralo,Umbralo,Umbralo,Fantasma/Planta,,,False,Aprobado en conversación
+198,199,Fungomal,Fungomal,Fungomal,Fantasma/Planta,,,False,Aprobado en conversación
+199,200,Esporénigma,Esporénigm,Esporénigma,Fantasma/Planta,,,False,Alias provisional
+200,201,Riscorn,Riscorn,Riscorn,Dragón/Tierra,,,False,Aprobado en conversación
+201,202,Terracorn,Terracorn,Terracorn,Dragón/Tierra,,,False,Aprobado en conversación
+202,203,Geodrakon,Geodrakon,Geodrakon,Dragón/Tierra,,,False,Aprobado en conversación
+203,204,Volkrín,Volkrín,Volkrín,Fuego/Volador,,,False,Aprobado en conversación
+204,205,Pionix,Pionix,Pionix,Fuego/Volador,,,False,Aprobado en conversación
+205,206,Ignírion,Ignírion,Ignírion,Fuego/Volador,,,False,Aprobado en conversación
+206,207,Lumantis,Lumantis,Lumantis,Bicho/Psíquico,,,False,Aprobado en conversación
+207,208,Prismantis,Prismantis,Prismantis,Bicho/Psíquico,,,False,Aprobado en conversación
+208,209,Oráculis,Oráculis,Oráculis,Bicho/Psíquico,,600.0,False,Aprobado en conversación
+209,210,Reflecín,Reflecín,Reflecín,Fantasma/Acero,,,False,Aprobado en conversación
+210,211,Espexral,Espexral,Espexral,Fantasma/Acero,,,False,Aprobado en conversación
+211,212,Miralith,Miralith,Miralith,Fantasma/Acero,,600.0,False,Aprobado en conversación
+212,213,Lumensa,Lumensa,Lumensa,Fuego/Hada,,,False,Aprobado en conversación
+213,214,Flamalín,Flamalín,Flamalín,Fuego/Hada,,,False,Aprobado en conversación
+214,215,Aurignis,Aurignis,Aurignis,Fuego/Hada,,600.0,False,Aprobado en conversación
+215,216,Fulgurita,Fulgurita,Fulgurita,Eléctrico/Acero,,,False,Aprobado en conversación
+216,217,Voltaik,Voltaik,Voltaik,Eléctrico/Acero,,,False,Aprobado en conversación
+217,218,Raynex,Raynex,Raynex,Eléctrico/Acero,,600.0,False,Aprobado en conversación
+218,219,Abyssén,Abyssén,Abyssén,Veneno/Dragón,,,False,Aprobado en conversación
+219,220,Toxidrak,Toxidrak,Toxidrak,Veneno/Dragón,,,False,Aprobado en conversación
+220,221,Leviadrén,Leviadrén,Leviadrén,Veneno/Dragón,,600.0,False,Aprobado en conversación
+221,222,Candelín,Candelín,Candelín,Fuego/Fantasma,,,False,Aprobado en conversación
+222,223,Ceravela,Ceravela,Ceravela,Fuego/Fantasma,,,False,Aprobado en conversación
+223,224,Candelarca,Candelarca,Candelarca,Fuego/Fantasma,,580.0,False,Aprobado en conversación
+224,225,Velín,Velín,Velín,Bicho/Veneno,,,False,Aprobado en conversación
+225,226,Tejumbra,Tejumbra,Tejumbra,Bicho/Veneno,,,False,Aprobado en conversación
+226,227,Telaracna,Telaracna,Telaracna,Bicho/Veneno,,580.0,False,Aprobado en conversación
+227,228,Dunín,Dunín,Dunín,Tierra/Psíquico,,,False,Aprobado en conversación
+228,229,Dunavelo,Dunavelo,Dunavelo,Tierra/Psíquico,,,False,Aprobado en conversación
+229,230,Esfingduna,Esfingduna,Esfingduna,Tierra/Psíquico,,580.0,False,Aprobado en conversación
+230,231,Vidriín,Vidriín,Vidriín,Hada/Acero,,,False,Aprobado en conversación
+231,232,Vitraluz,Vitraluz,Vitraluz,Hada/Acero,,,False,Aprobado en conversación
+232,233,Catedrálux,Catedrálux,Catedrálux,Hada/Acero,,580.0,False,Aprobado en conversación
+233,234,Tremín,Tremín,Tremín,Tierra/Normal,,,False,Aprobado en conversación
+234,235,Resonel,Resonel,Resonel,Tierra/Normal,,,False,Aprobado en conversación
+235,236,Sismórgano,Sismórgano,Sismórgano,Tierra/Normal,,580.0,False,Aprobado en conversación
+236,237,Sintélix,Sintélix,Sintélix,Normal/Veneno,,,False,Aprobado en conversación
+237,238,Toxenlace,Toxenlace,Toxenlace,Normal/Veneno,,,False,Aprobado en conversación
+238,239,Controlix,Controlix,Controlix,Normal/Veneno,,,False,Aprobado en conversación
+239,240,Frigmor,Frigmor,Frigmor,Hielo/Acero,,,False,Aprobado en conversación
+240,241,Crioblok,Crioblok,Crioblok,Hielo/Acero,,,False,Aprobado en conversación
+241,242,Glaciortex,Glaciortex,Glaciortex,Hielo/Acero,,,False,Aprobado en conversación
+242,243,Sombralgo,Sombralgo,Sombralgo,Fantasma/Dragón,,,False,Aprobado en conversación
+243,244,Umbrakel,Umbrakel,Umbrakel,Fantasma/Dragón,,,False,Aprobado en conversación
+244,245,Eclipsálido,Eclipsido,Eclipsálido,Fantasma/Dragón,,,False,Alias provisional
+245,246,Obsidión,Obsidión,Obsidión,Roca/Siniestro,,,False,Aprobado en conversación
+246,247,Fragmentor,Fragmentor,Fragmentor,Roca/Siniestro,,,False,Aprobado en conversación
+247,248,Colopsia,Colopsia,Colopsia,Roca/Siniestro,,,False,Aprobado en conversación
+248,249,Necralith,Necralith,Necralith,Psíquico/Acero,,,False,Aprobado en conversación
+249,250,Mentalith,Mentalith,Mentalith,Psíquico/Acero,,,False,Aprobado en conversación
