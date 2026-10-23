@@ -1,0 +1,194 @@
+[
+  {
+    "id": 78,
+    "key": "ABILITY_VALDARA_ESPIRITU_PROTECTOR",
+    "name": "Espiritu Protector",
+    "screen_name": "ESP. PROTECT",
+    "battle_effect_status": "implemented",
+    "description": "Daño recibido x0,85\npor debajo de la mitad de PS."
+  },
+  {
+    "id": 79,
+    "key": "ABILITY_VALDARA_AFINIDAD_OSCURA",
+    "name": "Afinidad Oscura",
+    "screen_name": "AFIN. OSCURA",
+    "battle_effect_status": "implemented",
+    "description": "Potencia Siniestro\nx1,20."
+  },
+  {
+    "id": 80,
+    "key": "ABILITY_VALDARA_INSTINTO_EXPLORADOR",
+    "name": "Instinto Explorador",
+    "screen_name": "INST. EXPL.",
+    "battle_effect_status": "implemented",
+    "description": "Potencia ataques\nde Tierra x1,20."
+  },
+  {
+    "id": 81,
+    "key": "ABILITY_VALDARA_VINCULO_GUARDIAN",
+    "name": "Vinculo Guardian",
+    "screen_name": "VINC. GUARD",
+    "battle_effect_status": "implemented",
+    "description": "Daño supereficaz\nrecibido x0,80."
+  },
+  {
+    "id": 82,
+    "key": "ABILITY_VALDARA_PODER_UMBRIO",
+    "name": "Poder Umbrio",
+    "screen_name": "PODER UMBRIO",
+    "battle_effect_status": "implemented",
+    "description": "Potencia Siniestro y\nFantasma x1,25."
+  },
+  {
+    "id": 83,
+    "key": "ABILITY_VALDARA_ADAPTACION_NATURAL",
+    "name": "Adaptacion Natural",
+    "screen_name": "ADAPT. NAT.",
+    "battle_effect_status": "implemented",
+    "description": "Daño supereficaz\nrecibido x0,80."
+  },
+  {
+    "id": 84,
+    "key": "ABILITY_VALDARA_AURA_PROTECTORA",
+    "name": "Aura Protectora",
+    "screen_name": "AURA PROTECT",
+    "battle_effect_status": "implemented",
+    "description": "Protege al aliado en\ncombates dobles x0,80."
+  },
+  {
+    "id": 85,
+    "key": "ABILITY_VALDARA_GRACIA_GUARDIANA",
+    "name": "Gracia Guardiana",
+    "screen_name": "GRACIA GUARD",
+    "battle_effect_status": "implemented",
+    "description": "Recupera 1/16 de PS\nal final de cada turno."
+  },
+  {
+    "id": 86,
+    "key": "ABILITY_VALDARA_DOMINIO_OSCURO",
+    "name": "Dominio Oscuro",
+    "screen_name": "DOMINIO OSC",
+    "battle_effect_status": "implemented",
+    "description": "Potencia Siniestro\nx1,30."
+  },
+  {
+    "id": 87,
+    "key": "ABILITY_VALDARA_VOLUNTAD_UMBRIA",
+    "name": "Voluntad Umbria",
+    "screen_name": "VOLUNT. UMB",
+    "battle_effect_status": "pending",
+    "description": "+1 At. Esp. tras\nderrotar a un rival."
+  },
+  {
+    "id": 88,
+    "key": "ABILITY_VALDARA_ADAPTACION_TERRENAL",
+    "name": "Adaptacion Terrenal",
+    "screen_name": "ADAPT. TERR",
+    "battle_effect_status": "implemented",
+    "description": "Daño supereficaz\nrecibido x0,75."
+  },
+  {
+    "id": 89,
+    "key": "ABILITY_VALDARA_CORAZA_ANCESTRAL",
+    "name": "Coraza Ancestral",
+    "screen_name": "CORAZA ANC.",
+    "battle_effect_status": "implemented",
+    "description": "Daño físico\nrecibido x0,80."
+  },
+  {
+    "id": 90,
+    "key": "ABILITY_VALDARA_JURAMENTO_PROTECTOR",
+    "name": "Juramento Protector",
+    "screen_name": "JURAM. PROT.",
+    "battle_effect_status": "pending",
+    "description": "+1 Defensa y Def. Esp.\nal entrar en combate."
+  },
+  {
+    "id": 91,
+    "key": "ABILITY_VALDARA_BENDICION_VITAL",
+    "name": "Bendicion Vital",
+    "screen_name": "BENDIC. VIT",
+    "battle_effect_status": "pending",
+    "description": "Curación por movimientos\npropios x1,30."
+  },
+  {
+    "id": 92,
+    "key": "ABILITY_VALDARA_SOBERANIA_OSCURA",
+    "name": "Soberania Oscura",
+    "screen_name": "SOBERANIA OS",
+    "battle_effect_status": "pending",
+    "description": "Siniestro x1,20; ignora\nDefensas positivas."
+  },
+  {
+    "id": 93,
+    "key": "ABILITY_VALDARA_REINA_DEL_ECLIPSE",
+    "name": "Reina Del Eclipse",
+    "screen_name": "REINA ECLIP.",
+    "battle_effect_status": "pending",
+    "description": "+1 At. Esp. y Vel.\nal derrotar a un rival."
+  },
+  {
+    "id": 94,
+    "key": "ABILITY_VALDARA_FUERZA_PRIMORDIAL",
+    "name": "Fuerza Primordial",
+    "screen_name": "F. PRIMORD.",
+    "battle_effect_status": "pending",
+    "description": "Tierra y Roca\nx1,25."
+  },
+  {
+    "id": 95,
+    "key": "ABILITY_VALDARA_FORTALEZA_VIVIENTE",
+    "name": "Fortaleza Viviente",
+    "screen_name": "FORT. VIVA",
+    "battle_effect_status": "pending",
+    "description": "Daño físico eficaz\nx0,70."
+  },
+  {
+    "id": 96,
+    "key": "ABILITY_VALDARA_SOBERANO_ONIRICO",
+    "name": "Soberano Onirico",
+    "screen_name": "SOBER. ONIR",
+    "battle_effect_status": "pending",
+    "description": "Habilidad del Trío\nMístico. En diseño."
+  },
+  {
+    "id": 97,
+    "key": "ABILITY_VALDARA_PESADILLA_ETERNA",
+    "name": "Pesadilla Eterna",
+    "screen_name": "PESAD. ETER",
+    "battle_effect_status": "pending",
+    "description": "Habilidad oculta.\nEn diseño."
+  },
+  {
+    "id": 98,
+    "key": "ABILITY_VALDARA_SENOR_DE_LOS_PORTALES",
+    "name": "Senor De Los Portales",
+    "screen_name": "SENOR PORT",
+    "battle_effect_status": "pending",
+    "description": "Habilidad del Trío\nMístico. En diseño."
+  },
+  {
+    "id": 99,
+    "key": "ABILITY_VALDARA_DISTORSION_ESPACIAL",
+    "name": "Distorsion Espacial",
+    "screen_name": "DIST. ESPAC",
+    "battle_effect_status": "pending",
+    "description": "Habilidad oculta.\nEn diseño."
+  },
+  {
+    "id": 100,
+    "key": "ABILITY_VALDARA_DOMINIO_DISTORSIONADO",
+    "name": "Dominio Distorsionado",
+    "screen_name": "DOM. DISTOR",
+    "battle_effect_status": "pending",
+    "description": "Habilidad del Trío\nMístico. En diseño."
+  },
+  {
+    "id": 101,
+    "key": "ABILITY_VALDARA_RUPTURA_DIMENSIONAL",
+    "name": "Ruptura Dimensional",
+    "screen_name": "RUPT. DIM",
+    "battle_effect_status": "pending",
+    "description": "Habilidad oculta.\nEn diseño."
+  }
+]

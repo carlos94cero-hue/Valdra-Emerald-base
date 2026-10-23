@@ -1,0 +1,278 @@
+{
+  "title": "Valdara - Bloque 1",
+  "species_count": 11,
+  "starter_forms": 8,
+  "regional_path_save_var": "VAR_VALDARA_CAMINO (0x40F7)",
+  "required_flags": [
+    "FLAG_VALDARA_PRIMERA_PRUEBA (0x020)",
+    "FLAG_VALDARA_SEGUNDA_PRUEBA (0x021)"
+  ],
+  "stages": [
+    "Nivel 18 + ruta elegida",
+    "Primera prueba completada + siguiente nivel",
+    "Segunda prueba completada + siguiente nivel; rama de la ruta"
+  ],
+  "current_ability_runtime": "En integración separada",
+  "pokemon_genders_design": "una especie conceptual con sexos macho/hembra; 2 IDs técnicos para sus gráficos distintos",
+  "path_stats": {
+    "3": {
+      "Héroe": {
+        "hp": 65,
+        "attack": 75,
+        "defense": 70,
+        "sp_attack": 55,
+        "sp_defense": 70,
+        "speed": 55,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 390
+      },
+      "Villano": {
+        "hp": 60,
+        "attack": 85,
+        "defense": 55,
+        "sp_attack": 75,
+        "sp_defense": 50,
+        "speed": 65,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 390
+      },
+      "Investigador": {
+        "hp": 65,
+        "attack": 80,
+        "defense": 65,
+        "sp_attack": 55,
+        "sp_defense": 60,
+        "speed": 65,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 390
+      }
+    },
+    "4": {
+      "Héroe": {
+        "hp": 80,
+        "attack": 55,
+        "defense": 80,
+        "sp_attack": 55,
+        "sp_defense": 80,
+        "speed": 50,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 400
+      },
+      "Villano": {
+        "hp": 70,
+        "attack": 60,
+        "defense": 65,
+        "sp_attack": 90,
+        "sp_defense": 60,
+        "speed": 55,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 400
+      },
+      "Investigador": {
+        "hp": 80,
+        "attack": 65,
+        "defense": 80,
+        "sp_attack": 55,
+        "sp_defense": 75,
+        "speed": 45,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 400
+      }
+    },
+    "5": {
+      "Héroe": {
+        "hp": 90,
+        "attack": 100,
+        "defense": 95,
+        "sp_attack": 75,
+        "sp_defense": 95,
+        "speed": 75,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 530
+      },
+      "Villano": {
+        "hp": 80,
+        "attack": 120,
+        "defense": 70,
+        "sp_attack": 105,
+        "sp_defense": 65,
+        "speed": 90,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 530
+      },
+      "Investigador": {
+        "hp": 95,
+        "attack": 115,
+        "defense": 90,
+        "sp_attack": 65,
+        "sp_defense": 80,
+        "speed": 85,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 530
+      }
+    },
+    "6": {
+      "Héroe": {
+        "hp": 110,
+        "attack": 70,
+        "defense": 115,
+        "sp_attack": 70,
+        "sp_defense": 110,
+        "speed": 65,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 540
+      },
+      "Villano": {
+        "hp": 100,
+        "attack": 80,
+        "defense": 85,
+        "sp_attack": 120,
+        "sp_defense": 85,
+        "speed": 70,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 540
+      },
+      "Investigador": {
+        "hp": 115,
+        "attack": 85,
+        "defense": 110,
+        "sp_attack": 65,
+        "sp_defense": 105,
+        "speed": 60,
+        "source": "Ficha Técnica Iniciales v1 — APROBADO",
+        "total": 540
+      }
+    }
+  },
+  "final_stats": {
+    "7": {
+      "hp": 115,
+      "attack": 125,
+      "defense": 120,
+      "sp_attack": 110,
+      "sp_defense": 125,
+      "speed": 95,
+      "source": "Ficha Técnica Iniciales v1 — APROBADO",
+      "total": 690
+    },
+    "8": {
+      "hp": 100,
+      "attack": 150,
+      "defense": 90,
+      "sp_attack": 135,
+      "sp_defense": 90,
+      "speed": 125,
+      "source": "Ficha Técnica Iniciales v1 — APROBADO",
+      "total": 690
+    },
+    "9": {
+      "hp": 120,
+      "attack": 145,
+      "defense": 120,
+      "sp_attack": 90,
+      "sp_defense": 110,
+      "speed": 105,
+      "source": "Ficha Técnica Iniciales v1 — APROBADO",
+      "total": 690
+    },
+    "10": {
+      "hp": 135,
+      "attack": 100,
+      "defense": 140,
+      "sp_attack": 115,
+      "sp_defense": 135,
+      "speed": 65,
+      "source": "Ficha Técnica Iniciales v1 — APROBADO",
+      "total": 690
+    },
+    "11": {
+      "hp": 115,
+      "attack": 110,
+      "defense": 110,
+      "sp_attack": 155,
+      "sp_defense": 110,
+      "speed": 90,
+      "source": "Ficha Técnica Iniciales v1 — APROBADO",
+      "total": 690
+    },
+    "12": {
+      "hp": 140,
+      "attack": 115,
+      "defense": 140,
+      "sp_attack": 100,
+      "sp_defense": 125,
+      "speed": 70,
+      "source": "Ficha Técnica Iniciales v1 — APROBADO",
+      "total": 690
+    }
+  },
+  "mythic": {
+    "159": {
+      "name": "Nevarión",
+      "approved_BST_total": 800,
+      "actual_six_stats_approved": false,
+      "abilities": {
+        "normal": "Soberano Onírico",
+        "alternative": "Pesadilla Eterna",
+        "status": "Aprobado en conversación"
+      },
+      "moves": [
+        {
+          "name": "Eclipse Onírico",
+          "pp": 5,
+          "status": "Aprobado: nombre y PP",
+          "note": "Potencia/efecto aprobados en conversación; consolidación numérica pendiente"
+        }
+      ]
+    },
+    "160": {
+      "name": "Umbrálix",
+      "approved_BST_total": 800,
+      "actual_six_stats_approved": false,
+      "abilities": {
+        "normal": "Señor de los Portales",
+        "alternative": "Distorsión Espacial",
+        "status": "Aprobado en conversación"
+      },
+      "moves": [
+        {
+          "name": "Colapso de Portales",
+          "pp": 5,
+          "status": "Aprobado: nombre y PP",
+          "note": "Potencia/efecto aprobados en conversación; consolidación numérica pendiente"
+        }
+      ]
+    },
+    "161": {
+      "name": "Límbora",
+      "approved_BST_total": 800,
+      "actual_six_stats_approved": false,
+      "abilities": {
+        "normal": "Dominio Distorsionado",
+        "alternative": "Ruptura Dimensional",
+        "status": "Aprobado en conversación"
+      },
+      "moves": [
+        {
+          "name": "Juicio de la Distorsión",
+          "pp": 5,
+          "status": "Aprobado: nombre y PP",
+          "note": "Potencia/efecto aprobados en conversación; consolidación numérica pendiente"
+        }
+      ]
+    }
+  },
+  "existing_original_gba_art": {
+    "1": "tiburon_inicial_m",
+    "2": "tiburon_inicial_f",
+    "7": "guardian_heroico_m",
+    "8": "abisal_villano_m",
+    "9": "explorador_investigador_m",
+    "10": "guardian_heroico_f",
+    "11": "abisal_villano_f",
+    "12": "explorador_investigador_f",
+    "159": "nevarion",
+    "160": "umbralix",
+    "161": "limbora"
+  }
+}

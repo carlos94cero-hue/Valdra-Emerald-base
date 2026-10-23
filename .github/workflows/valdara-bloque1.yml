@@ -1,0 +1,53 @@
+name: Valdara · Bloque 1 · crianza, habilidades y movimientos (SIN ROM)
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - valdara-bloque1-crianza
+    paths:
+      - 'valdara/bloque1/**'
+      - '.github/workflows/valdara-bloque1.yml'
+permissions:
+  contents: write
+concurrency:
+  group: valdara-bloque1
+  cancel-in-progress: false
+jobs:
+  native-source-tests:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply source-only Valdara engine changes
+        run: |
+          set -euo pipefail
+          python3 valdara/bloque1/apply_patch.py
+      - name: Test native breeding and ability logic without compiling ROM
+        run: |
+          set -euo pipefail
+          python3 valdara/bloque1/validate_block1.py | tee /tmp/valdara-bloque1-results.txt
+          test ! -f pokeemerald.gba
+          test ! -f dist/Valdara_Esmeralda_Puerto_Brisa.gba
+      - name: Save reviewed source modifications
+        run: |
+          set -euo pipefail
+          git config user.name 'Valdara Build Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add include/constants/{vars.h,flags.h,abilities.h,moves.h}
+          git add src/pokemon.c src/battle_util.c src/data/pokemon/{species_info.h,level_up_learnsets.h}
+          git add src/data/text/{abilities.h,move_names.h,move_descriptions.h} src/data/battle_moves.h
+          git add data/battle_anim_scripts.s data/event_scripts.s
+          if ! git diff --cached --quiet; then
+            git commit -m 'Integrar Bloque 1: crianzas, 11 habilidades activas y 3 movimientos sin generar ROM'
+            git push origin HEAD:valdara-bloque1-crianza
+          fi
+      - name: Verify source state and publish test log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Valdara-Bloque1-Crianza-Pruebas-SIN-ROM
+          path: |
+            valdara/bloque1/audit.json
+            valdara/bloque1/README.md
+            /tmp/valdara-bloque1-results.txt
+          if-no-files-found: warn

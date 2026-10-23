@@ -1,0 +1,29 @@
+{
+  "version": "Bloque 1 / ingeniería sin ROM",
+  "status": "PASS native pure C tests + source & data consistency",
+  "rom_generated": false,
+  "original_species_art": 11,
+  "starter_sprites": 8,
+  "mythic_sprites": 3,
+  "three_evolution_routes": true,
+  "branch_boundaries": "Macho 1-3-5-(7,8,9), Hembra 2-4-6-(10,11,12)",
+  "exact_approved_final_bst": 690,
+  "intermediate_route_stat_sets": 12,
+  "ability_names_registered": 24,
+  "active_effects_implemented": 11,
+  "hidden_abilities_pending_real_engine": 6,
+  "mythic_ability_effects_pending_approved_details": 6,
+  "new_original_battle_moves_native": 3,
+  "approved_movement_specs_archived": 18,
+  "moves_pending_full_mechanics": 15,
+  "status_limits": [
+    "No full GBA ROM build or emulator test by explicit request",
+    "3 active new moves reuse existing Emerald battle animations",
+    "No physical/special split for other Dark moves; Eclipse specifically uses approved physical category",
+    "Fairy type unavailable in vanilla Emerald; those signatures remain data-only",
+    "3 mythic exclusive attacks have approved names and PP only, not safe to assign invented power",
+    "Voluntad Umbría knockout trigger and hidden abilities are not enabled in this stage",
+    "Story events must call route scripts before first evolution and the two mission completion scripts",
+    "Mythic creatures preserve approved BST=800 target but do not have six approved numbers"
+  ]
+}
