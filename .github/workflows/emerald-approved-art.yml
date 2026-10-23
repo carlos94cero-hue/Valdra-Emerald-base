@@ -1,0 +1,56 @@
+name: Esmeralda - protagonistas aprobados
+on:
+  workflow_dispatch:
+  push:
+    branches: [valdara-emerald-arte-aprobado]
+permissions:
+  contents: read
+concurrency:
+  group: emerald-approved-art-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Instalar compilador y herramientas de prueba
+        run: |
+          set -eu
+          sudo sed -i 's|http://azure.archive.ubuntu.com/ubuntu/|http://archive.ubuntu.com/ubuntu/|g; s|https://azure.archive.ubuntu.com/ubuntu/|https://archive.ubuntu.com/ubuntu/|g' /etc/apt/sources.list.d/ubuntu.sources
+          sudo apt-get update -o Acquire::Retries=2 -o Acquire::http::Timeout=30
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends build-essential git binutils-arm-none-eabi libpng-dev python3-pil libmgba-dev
+      - name: Instalar y validar los dibujos nuevos
+        run: |
+          python3 valdara/install_emerald_art.py
+          git diff --exit-code -- src/data/object_events/object_event_anims.h src/field_player_avatar.c src/event_object_movement.c
+      - name: Preparar agbcc original
+        run: |
+          git clone --depth 1 https://github.com/pret/agbcc.git /tmp/agbcc
+          cd /tmp/agbcc
+          ./build.sh > "$GITHUB_WORKSPACE/dist/agbcc.log" 2>&1
+          ./install.sh "$GITHUB_WORKSPACE"
+      - name: Compilar Esmeralda con los personajes nuevos
+        run: make -j2
+      - name: Comprobar los datos realmente compilados
+        run: |
+          python3 valdara/verify_compiled_art.py
+          cp pokeemerald.gba dist/Valdara_Emerald_ArteAprobado.gba
+      - name: Probar arranque y capturar emulador mGBA
+        run: |
+          cc -O2 valdara/smoke_emerald.c -o /tmp/emerald-smoke -lmgba
+          /tmp/emerald-smoke pokeemerald.gba dist/emulador > dist/emulador.log 2>&1
+          python3 - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          for p in Path('dist/emulador').glob('*.ppm'):
+              Image.open(p).save(p.with_suffix('.png'))
+              p.unlink()
+          PY
+      - name: Guardar ROM y comprobaciones
+        uses: actions/upload-artifact@v4
+        with:
+          name: Valdara-Esmeralda-arte-aprobado
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14
